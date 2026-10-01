@@ -2,6 +2,10 @@
 
 > Rule: newest entry on top. Every work iteration appends an entry AND updates `REPORT_DRAFT.md` + this log without being asked.
 
+## 2026-10-01 — Ashar PID integrated: 17/17 PASS after 5 source-verified corrections
+- Ashar delivered branch `ashar-pid-work` (17 tests + ASHAR_HANDOFF.md, Windows-authored, unexecuted). First Linux run: 12/17 — refuted his D-term minus-sign claim (v1.17.0 L47 is PLUS; his −4/−100 → +4/+100) and his 4-condition anti-windup gate claim (no such gate in L57-64; 3 saturation tests rewritten to accumulate-and-clamp + renamed). Header/comments corrected to real line numbers; his delivery preserved in `ashar/` for provenance. Coverage re-measured (PID 22/22, 10/10), inventory 51→57 rows, workbook/DOCX/patch/package regenerated, branch merged to main.
+- Remaining external: Taimoor workbook verification + viva bank (fallback already ships).
+
 ## 2026-10-01 — Identities finalized (Ali Haider Bajwa 24i3102, Taimoor Khalid 24i3052, Ashar Ahmed 24i3072, Section C SE); package renamed to `24i3102_24i3052_24i3072_C_*`, DOCX + submission_pkg rebuilt, RUN_INSTRUCTIONS.md restored after rebuild wipe.
 
 ## 2026-10-01 — Report complete, DOCX exported, submission package assembled

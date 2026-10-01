@@ -81,11 +81,11 @@ c1=`dt > FLT_EPSILON`, c2=`isfinite(last)`.
 
 | c1 | c2 | outcome | pair test | demonstrates |
 |---|---|---|---|---|
-| F | F | 0 (forced) | PST-02 | base |
-| T | F | 0 (forced) | PST-03 | c1 independent (only c1 differs vs PST-02) |
-| T | T | active ((0.6−0.5)/0.1=1.0 → 5.0) | PST-04 | c2 independent (only c2 differs vs PST-03) |
-| F | T | 0 (forced) | PST-05 | c1=F re-confirmed with history present |
+| F | F | 0 (forced) | PST-07 | base |
+| T | F | 0 (forced) | PST-08 | c1 independent (only c1 differs vs PST-07) |
+| T | T | active ((2.5−2.0)/0.5=1.0 → +4.0, PLUS sign L47) | PST-09 | c2 independent (only c2 differs vs PST-08) |
+| F | T | 0 (forced) | PST-10 | c1=F re-confirmed with history present |
 
-Boundary: PST-06 (dt==eps → F) vs PST-07 (dt==2eps → T, saturates). Decision T+F shown. P-D2 `isfinite(integral_new)`: T shown by all integral tests, F shown by PST-01 (NaN output, integral held at 0).
+Boundary: PST-11 (dt==eps → F) vs PST-12 (dt==2eps → T, +100 saturation). Decision T+F shown. P-D2 `isfinite(integral_new)`: T shown by all integral tests, F shown by PST-05/PST-06 (NaN/−Inf candidates, integral held at 0).
 
-> NOTE (team): P-D3 rows are lead-authored fallback for Ashar's package; replace with his pairs if he delivers.
+> Owner: Ashar Ahmed (24i3072); pairs lead-verified (sign + no-freeze corrections as in TEST_INVENTORY.md).

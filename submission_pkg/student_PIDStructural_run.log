@@ -1,30 +1,42 @@
-[==========] Running 11 tests from 1 test suite.
+[==========] Running 17 tests from 1 test suite.
 [----------] Global test environment set-up.
-[----------] 11 tests from PIDStructural
-[ RUN      ] PIDStructural.NonFiniteIntegralGuarded
-[       OK ] PIDStructural.NonFiniteIntegralGuarded (0 ms)
-[ RUN      ] PIDStructural.DerivativeGuardAllFalse
-[       OK ] PIDStructural.DerivativeGuardAllFalse (0 ms)
-[ RUN      ] PIDStructural.DerivativeGuardTimeOkButNoHistory
-[       OK ] PIDStructural.DerivativeGuardTimeOkButNoHistory (0 ms)
-[ RUN      ] PIDStructural.DerivativeGuardFullyActive
-[       OK ] PIDStructural.DerivativeGuardFullyActive (0 ms)
-[ RUN      ] PIDStructural.DerivativeGuardNoTimeButHistory
-[       OK ] PIDStructural.DerivativeGuardNoTimeButHistory (0 ms)
-[ RUN      ] PIDStructural.DerivativeGuardExactEpsilonBoundary
-[       OK ] PIDStructural.DerivativeGuardExactEpsilonBoundary (0 ms)
-[ RUN      ] PIDStructural.DerivativeGuardJustAboveEpsilonSaturates
-[       OK ] PIDStructural.DerivativeGuardJustAboveEpsilonSaturates (0 ms)
-[ RUN      ] PIDStructural.NegativeDtDisablesDerivative
-[       OK ] PIDStructural.NegativeDtDisablesDerivative (0 ms)
+[----------] 17 tests from PIDStructural
+[ RUN      ] PIDStructural.IntegralFrozenWhenUpdateFlagCleared
+[       OK ] PIDStructural.IntegralFrozenWhenUpdateFlagCleared (0 ms)
+[ RUN      ] PIDStructural.SaturationHighClampsOutputIntegralNotFrozen
+[       OK ] PIDStructural.SaturationHighClampsOutputIntegralNotFrozen (0 ms)
+[ RUN      ] PIDStructural.SaturationLowClampsOutputIntegralNotFrozen
+[       OK ] PIDStructural.SaturationLowClampsOutputIntegralNotFrozen (0 ms)
+[ RUN      ] PIDStructural.SaturationHighThenReversalUnwindsIntegral
+[       OK ] PIDStructural.SaturationHighThenReversalUnwindsIntegral (0 ms)
+[ RUN      ] PIDStructural.NonFiniteIntegralCandidateIsDiscarded_NaN
+[       OK ] PIDStructural.NonFiniteIntegralCandidateIsDiscarded_NaN (0 ms)
+[ RUN      ] PIDStructural.NonFiniteIntegralCandidateIsDiscarded_NegInfSaturates
+[       OK ] PIDStructural.NonFiniteIntegralCandidateIsDiscarded_NegInfSaturates (0 ms)
+[ RUN      ] PIDStructural.DerivativeGuardBlocksWhenNoTimeAndNoHistory
+[       OK ] PIDStructural.DerivativeGuardBlocksWhenNoTimeAndNoHistory (0 ms)
+[ RUN      ] PIDStructural.DerivativeGuardBlocksWhenTimeOkButNoHistory
+[       OK ] PIDStructural.DerivativeGuardBlocksWhenTimeOkButNoHistory (0 ms)
+[ RUN      ] PIDStructural.DerivativeGuardActiveWhenTimeAndHistory
+[       OK ] PIDStructural.DerivativeGuardActiveWhenTimeAndHistory (0 ms)
+[ RUN      ] PIDStructural.DerivativeGuardBlocksWhenHistoryButNoTime
+[       OK ] PIDStructural.DerivativeGuardBlocksWhenHistoryButNoTime (0 ms)
+[ RUN      ] PIDStructural.DerivativeGuardExactEpsilonIsNotEnoughTime
+[       OK ] PIDStructural.DerivativeGuardExactEpsilonIsNotEnoughTime (0 ms)
+[ RUN      ] PIDStructural.DerivativeGuardJustAboveEpsilonSaturatesHigh
+[       OK ] PIDStructural.DerivativeGuardJustAboveEpsilonSaturatesHigh (0 ms)
+[ RUN      ] PIDStructural.NegativeDtDisablesDerivativeTerm
+[       OK ] PIDStructural.NegativeDtDisablesDerivativeTerm (0 ms)
 [ RUN      ] PIDStructural.ResetDerivativeClearsHistory
 [       OK ] PIDStructural.ResetDerivativeClearsHistory (0 ms)
-[ RUN      ] PIDStructural.IntegralWindupClampsAtLimit
-[       OK ] PIDStructural.IntegralWindupClampsAtLimit (0 ms)
-[ RUN      ] PIDStructural.OutputLimitExactBoundaryNotClamped
-[       OK ] PIDStructural.OutputLimitExactBoundaryNotClamped (0 ms)
-[----------] 11 tests from PIDStructural (0 ms total)
+[ RUN      ] PIDStructural.IntegralWindupClampsExactlyAtLimit
+[       OK ] PIDStructural.IntegralWindupClampsExactlyAtLimit (0 ms)
+[ RUN      ] PIDStructural.OutputLimitPassesExactBoundaryThrough
+[       OK ] PIDStructural.OutputLimitPassesExactBoundaryThrough (0 ms)
+[ RUN      ] PIDStructural.ZeroGainDegenerateConfigHoldsZero
+[       OK ] PIDStructural.ZeroGainDegenerateConfigHoldsZero (0 ms)
+[----------] 17 tests from PIDStructural (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 11 tests from 1 test suite ran. (0 ms total)
-[  PASSED  ] 11 tests.
+[==========] 17 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 17 tests.

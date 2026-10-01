@@ -57,16 +57,22 @@ Thresholds used: low 0.3, crit 0.15, emergen 0.07; n_cells 4, V_charged 4.2, V_e
 
 | Test ID | Component/function | Purpose / scenario | Key controlled input/state | Expected result | Exec | Structural target | Ref |
 |---|---|---|---|---|---|---|---|
-| PST-01 | updateIntegral | non-finite integral candidate guarded | fb +Inf, dt 0.1, I 0.1, sp 1 | NaN output, integral stays 0; then normal ramp 0/0/0.01 | PASS | P-D2 F-path | NonFiniteIntegralGuarded |
-| PST-02 | updateDerivative | guard all-false (dt 0, last NaN) | fb 0.5, dt 0, D 5 | 0 | PASS | P-D3 FF | DerivativeGuardAllFalse |
-| PST-03 | updateDerivative | time ok, no history (dt 0.1, last NaN) | fb 0.5, dt 0.1, D 5 | 0 | PASS | P-D3 TF | ...TimeOkButNoHistory |
-| PST-04 | updateDerivative | fully active | fb 0.5→0.6, dt 0.1, D 5 | 5.0 | PASS | P-D3 TT | ...FullyActive |
-| PST-05 | updateDerivative | no time but history (dt 0, last finite) | fb 0.7, dt 0, D 5 | 0 | PASS | P-D3 FT | ...NoTimeButHistory |
-| PST-06 | updateDerivative | exact dt==FLT_EPSILON boundary | dt FLT_EPSILON | 0 (not >) | PASS | P-D3 boundary | ...ExactEpsilonBoundary |
-| PST-07 | updateDerivative | just above epsilon saturates via D | dt 2*eps, D 5, limit 10 | 10.0 | PASS | P-D3 T + saturation | ...JustAboveEpsilonSaturates |
-| PST-08 | updateDerivative | negative dt robustness | dt -0.1, P 2 | 1.0 (P-only) | PASS | P-D3 invalid input | NegativeDtDisablesDerivative |
-| PST-09 | resetDerivative | history cleared to NaN | reset then dt 0.1 | 0 | PASS | P-D3 TF re-entry | ResetDerivativeClearsHistory |
-| PST-10 | updateIntegral | windup clamps exactly at limit | I 1, lim 0.5, e 1, dt 0.5 ×3 | 0, 0.5, 0.5; integral 0.5 | PASS | P-D1 T + clamp | IntegralWindupClampsAtLimit |
-| PST-11 | update/output limit | exact-boundary passthrough + clamp | P 1, lim 2, sp 5, fb 3/2/4 | 2.0 / 2.0 / 1.0 | PASS | saturation edges | OutputLimitExactBoundaryNotClamped |
+| PST-01 | update + updateIntegral | integral frozen when flag cleared, then evolves | P2/I5, sp1, fb0, dt0.1, flag F then T | 2.0 + int 0; then 2.0 + int 0.5 | PASS | P-D1 F→T | IntegralFrozenWhenUpdateFlagCleared |
+| PST-02 | output clamp + integral | high-side saturation clamps output, integral accumulates (no freeze gate in v1.17.0) | I.5/lim10/out±.2, sp2, fb0, dt.5 ×2 | 0 + int.5; then .2 + int 1.0 | PASS | saturation edges | SaturationHighClampsOutputIntegralNotFrozen |
+| PST-03 | output clamp + integral | low-side mirror | sp−2 mirror | 0 + int−.5; then −.2 + int −1.0 | PASS | saturation edges | SaturationLowClampsOutputIntegralNotFrozen |
+| PST-04 | integral unwind | error reversal under saturation unwinds integral | saturated-high, then sp→−2 | .2 + int 0.5 | PASS | saturation edges | SaturationHighThenReversalUnwindsIntegral |
+| PST-05 | updateIntegral | NaN feedback discards integral candidate | P1/I.1, sp1, fb NaN | NaN out + int 0; then 0 + int 0 | PASS | P-D2 F-path | NonFiniteIntegralCandidateIsDiscarded_NaN |
+| PST-06 | updateIntegral + output clamp | −Inf feedback clamps output, integral held | P1/I.1, sp1, fb −Inf | +10 + int 0; then 0 + int 0 | PASS | P-D2 F-path + clamp | ..._NegInfSaturates |
+| PST-07 | updateDerivative | guard all-false (dt 0, last NaN) | D4, fb2.0, dt0, fresh | 0 | PASS | P-D3 FF | DerivativeGuardBlocksWhenNoTimeAndNoHistory |
+| PST-08 | updateDerivative | time ok, no history (dt .5, last NaN) | D4, fb2.0, dt.5, fresh | 0 | PASS | P-D3 TF | ...TimeOkButNoHistory |
+| PST-09 | updateDerivative | fully active (PLUS sign, L47) | D4, seed 2.0/.5, then 2.5/.5 | +4.0 | PASS | P-D3 TT | ...ActiveWhenTimeAndHistory |
+| PST-10 | updateDerivative | history present but dt 0 | D4, seed 2.0/.5, then 3.0/dt0 | 0 | PASS | P-D3 FT | ...HistoryButNoTime |
+| PST-11 | updateDerivative | exact dt==EPS boundary (not >) | D4, seed 2.0/.5, then 2.5/dt=EPS | 0 | PASS | P-D3 boundary | ...ExactEpsilonIsNotEnoughTime |
+| PST-12 | updateDerivative | just above EPS saturates high via D | D4, 2.5/dt=2EPS, lim±100 | +100 (deriv 2097152 exact) | PASS | P-D3 T + saturation | ...JustAboveEpsilonSaturatesHigh |
+| PST-13 | updateDerivative | negative dt robustness | P2/D4, sp1, fb.5, dt−.5 | 1.0 (P-only) | PASS | P-D3 invalid input | NegativeDtDisablesDerivativeTerm |
+| PST-14 | resetDerivative | history cleared to NaN, guard re-entry | D2, seed 0/.5, reset, then 1.0/.5 | 0 | PASS | P-D3 TF re-entry | ResetDerivativeClearsHistory |
+| PST-15 | updateIntegral | windup clamps exactly at limit | I1/lim.5/out±10, sp1, fb0, dt.5 ×3 | 0, .5, .5; int .5 | PASS | P-D1 T + clamp | IntegralWindupClampsExactlyAtLimit |
+| PST-16 | output limit | exact-boundary passthrough + clamp | P1/lim±2, sp5, fb 3/2/4 | 2.0 / 2.0 / 1.0 | PASS | saturation edges | OutputLimitPassesExactBoundaryThrough |
+| PST-17 | degenerate config | zero gains hold zero | gains 0, out±5, sp3, fb1 | 0 + int 0 | PASS | degenerate | ZeroGainDegenerateConfigHoldsZero |
 
-> NOTE (team): PST rows are lead-authored fallback for Ashar's package. If Ashar delivers his own PIDStructural tests, replace these rows with his Test IDs and re-measure coverage before packaging.
+> Owner: Ashar Ahmed (24i3072). Authored by Ashar from his own derivation (ASHAR_HANDOFF.md); lead-verified on Linux — 5 expectations corrected against v1.17.0 source during verification (D-term PLUS sign L47: 2 tests; no conditional-integration freeze gate L57-64: 3 tests), final 17/17 PASS. Replaces the earlier 11-test lead fallback; PST prefix kept for workbook stability.

@@ -6,6 +6,7 @@
 | Date | Material use | Assumption introduced | Verified how |
 |---|---|---|---|
 | 2026-09-30 | Repository navigation/planning: parsed 227-line brief into phased plan, report template, workspace scaffolding | Env/toolchain facts taken from live `bash` audit (not model memory); scope candidates deferred until post-clone exploration | Audit commands re-runnable; scope TBD gated on actual source reads |
+| 2026-10-01 | Ashar integration verification: executed his 17 tests on Linux, triaged 5 failures against PID.cpp source (sign + phantom-gate claims refuted by L47/L57-64 + execution), applied minimal corrections, re-measured coverage | Assumed his float32 model + derivation correct until run; assumed nothing about unexecuted code — every claim re-verified empirically | 12/17 → 17/17 measured; PID 22/22 + 10/10 arcs re-captured; corrections documented in-test + ASHAR_HANDOFF.md §12 |
 | 2026-10-01 | PID fallback tests + workbook/xlsx + report/DOCX/packaging: drafted `PIDStructuralTest.cpp` (11 tests) to Ashar's brief spec, generated `Workbook.xlsx` from inventory tables via script, wrote §§6/8/9/10/11 + judgment (324 words), exported DOCX via python-docx | Assumed fallback matches Ashar spec closely enough to swap; assumed script transcription == md tables (asserted 51/32 row counts) | PID 11/11 PASS + 10/10 arcs measured; xlsx re-loaded and row/header-checked; judgment word-counted programmatically |
 | | | | |
 
