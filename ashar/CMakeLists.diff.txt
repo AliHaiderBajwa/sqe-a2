@@ -1,0 +1,15 @@
+# Ashar's CMake change — apply inside PX4-Autopilot (v1.17.0 baseline)
+# File: src/lib/pid/CMakeLists.txt
+# Adds exactly ONE line after the existing upstream registration.
+#
+# Upstream line (already present, DO NOT duplicate):
+#   px4_add_unit_gtest(SRC PIDTest.cpp LINKLIBS PID)
+#
+# Ashar's added line:
+px4_add_unit_gtest(SRC PIDStructuralTest.cpp LINKLIBS PID)
+
+# Build + run (from PX4-Autopilot repo root, px4_sitl_test config):
+#   cmake . -G Ninja -DCONFIG=px4_sitl_test -B build/px4_sitl_test
+#   cd build/px4_sitl_test && ninja unit-PIDStructural && ./unit-PIDStructural
+# Expected binary name: unit-PIDStructural (px4_add_unit_gtest rule:
+# filename minus trailing "Test" -> PIDStructural -> unit-PIDStructural).
