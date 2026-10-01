@@ -1,0 +1,30 @@
+[==========] Running 11 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 11 tests from PIDStructural
+[ RUN      ] PIDStructural.NonFiniteIntegralGuarded
+[       OK ] PIDStructural.NonFiniteIntegralGuarded (0 ms)
+[ RUN      ] PIDStructural.DerivativeGuardAllFalse
+[       OK ] PIDStructural.DerivativeGuardAllFalse (0 ms)
+[ RUN      ] PIDStructural.DerivativeGuardTimeOkButNoHistory
+[       OK ] PIDStructural.DerivativeGuardTimeOkButNoHistory (0 ms)
+[ RUN      ] PIDStructural.DerivativeGuardFullyActive
+[       OK ] PIDStructural.DerivativeGuardFullyActive (0 ms)
+[ RUN      ] PIDStructural.DerivativeGuardNoTimeButHistory
+[       OK ] PIDStructural.DerivativeGuardNoTimeButHistory (0 ms)
+[ RUN      ] PIDStructural.DerivativeGuardExactEpsilonBoundary
+[       OK ] PIDStructural.DerivativeGuardExactEpsilonBoundary (0 ms)
+[ RUN      ] PIDStructural.DerivativeGuardJustAboveEpsilonSaturates
+[       OK ] PIDStructural.DerivativeGuardJustAboveEpsilonSaturates (0 ms)
+[ RUN      ] PIDStructural.NegativeDtDisablesDerivative
+[       OK ] PIDStructural.NegativeDtDisablesDerivative (0 ms)
+[ RUN      ] PIDStructural.ResetDerivativeClearsHistory
+[       OK ] PIDStructural.ResetDerivativeClearsHistory (0 ms)
+[ RUN      ] PIDStructural.IntegralWindupClampsAtLimit
+[       OK ] PIDStructural.IntegralWindupClampsAtLimit (0 ms)
+[ RUN      ] PIDStructural.OutputLimitExactBoundaryNotClamped
+[       OK ] PIDStructural.OutputLimitExactBoundaryNotClamped (0 ms)
+[----------] 11 tests from PIDStructural (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 11 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 11 tests.

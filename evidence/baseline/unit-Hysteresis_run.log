@@ -1,0 +1,22 @@
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from Hysteresis
+[ RUN      ] Hysteresis.InitFalse
+[       OK ] Hysteresis.InitFalse (0 ms)
+[ RUN      ] Hysteresis.InitTrue
+[       OK ] Hysteresis.InitTrue (0 ms)
+[ RUN      ] Hysteresis.Zero
+[       OK ] Hysteresis.Zero (0 ms)
+[ RUN      ] Hysteresis.ChangeAfterTime
+[       OK ] Hysteresis.ChangeAfterTime (0 ms)
+[ RUN      ] Hysteresis.HysteresisChanged
+[       OK ] Hysteresis.HysteresisChanged (0 ms)
+[ RUN      ] Hysteresis.ChangeAfterMultipleSets
+[       OK ] Hysteresis.ChangeAfterMultipleSets (0 ms)
+[ RUN      ] Hysteresis.TakeChangeBack
+[       OK ] Hysteresis.TakeChangeBack (0 ms)
+[----------] 7 tests from Hysteresis (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 7 tests.

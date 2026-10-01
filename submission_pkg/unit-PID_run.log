@@ -1,0 +1,16 @@
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from PIDTest
+[ RUN      ] PIDTest.AllZeroCase
+[       OK ] PIDTest.AllZeroCase (0 ms)
+[ RUN      ] PIDTest.OutputLimit
+[       OK ] PIDTest.OutputLimit (0 ms)
+[ RUN      ] PIDTest.ProportinalOnly
+[       OK ] PIDTest.ProportinalOnly (0 ms)
+[ RUN      ] PIDTest.InteralOpenLoop
+[       OK ] PIDTest.InteralOpenLoop (0 ms)
+[----------] 4 tests from PIDTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 4 tests.

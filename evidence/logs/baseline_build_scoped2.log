@@ -1,0 +1,187 @@
+[1/124] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_compatibility_mode.dir/compatibility_mode.cc.o
+In file included from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/domain_core.h:61,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registration.h:32,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/fixture_driver.h:38,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/compatibility_mode.h:40,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/internal/compatibility_mode.cc:15:
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: warning: friend declaration ‘auto fuzztest::internal_no_adl::Utf8String()’ declares a non-template function [-Wnon-template-friend]
+  190 |   friend auto internal_no_adl::Utf8String();
+      |                                           ^
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: note: (if this is not what you intended, make sure the function template has already been declared and add ‘<>’ after the function name here)
+[2/124] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_io.dir/io.cc.o
+[3/124] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_logging.dir/logging.cc.o
+[4/124] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_logging.a
+[5/124] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_io.a
+[6/124] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_corpus_database.a
+[7/124] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_googletest_adaptor.dir/googletest_adaptor.cc.o
+In file included from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/domain_core.h:61,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registration.h:32,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/fixture_driver.h:38,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registry.h:30,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/googletest_adaptor.h:26,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/internal/googletest_adaptor.cc:2:
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: warning: friend declaration ‘auto fuzztest::internal_no_adl::Utf8String()’ declares a non-template function [-Wnon-template-friend]
+  190 |   friend auto internal_no_adl::Utf8String();
+      |                                           ^
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: note: (if this is not what you intended, make sure the function template has already been declared and add ‘<>’ after the function name here)
+[8/124] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_register_fuzzing_mocks.dir/register_fuzzing_mocks.cc.o
+[9/124] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_register_fuzzing_mocks.a
+[10/124] Linking CXX static library test/fuzztest/fuzztest/libfuzztest_fuzzing_bit_gen.a
+[11/124] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_fixture_driver.dir/fixture_driver.cc.o
+In file included from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/domain_core.h:61,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registration.h:32,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/fixture_driver.h:38,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/internal/fixture_driver.cc:15:
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: warning: friend declaration ‘auto fuzztest::internal_no_adl::Utf8String()’ declares a non-template function [-Wnon-template-friend]
+  190 |   friend auto internal_no_adl::Utf8String();
+      |                                           ^
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: note: (if this is not what you intended, make sure the function template has already been declared and add ‘<>’ after the function name here)
+[12/124] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_seed_seq.dir/seed_seq.cc.o
+[13/124] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_seed_seq.a
+[14/124] Building CXX object test/fuzztest/fuzztest/CMakeFiles/fuzztest_init_fuzztest.dir/init_fuzztest.cc.o
+In file included from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/domain_core.h:61,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registration.h:32,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/fixture_driver.h:38,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registry.h:30,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/googletest_adaptor.h:26,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/init_fuzztest.cc:35:
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: warning: friend declaration ‘auto fuzztest::internal_no_adl::Utf8String()’ declares a non-template function [-Wnon-template-friend]
+  190 |   friend auto internal_no_adl::Utf8String();
+      |                                           ^
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: note: (if this is not what you intended, make sure the function template has already been declared and add ‘<>’ after the function name here)
+[15/124] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_serialization.dir/serialization.cc.o
+[16/124] Building CXX object test/fuzztest/fuzztest/CMakeFiles/fuzztest_fuzztest_macros.dir/fuzztest_macros.cc.o
+In file included from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/domain_core.h:61,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registration.h:32,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/fuzztest_macros.h:27,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/fuzztest_macros.cc:15:
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: warning: friend declaration ‘auto fuzztest::internal_no_adl::Utf8String()’ declares a non-template function [-Wnon-template-friend]
+  190 |   friend auto internal_no_adl::Utf8String();
+      |                                           ^
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: note: (if this is not what you intended, make sure the function template has already been declared and add ‘<>’ after the function name here)
+[17/124] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_serialization.a
+[18/124] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_status.dir/status.cc.o
+[19/124] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_status.a
+[20/124] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_type_support.dir/type_support.cc.o
+[21/124] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_type_support.a
+[22/124] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_coverage.a
+[23/124] Building CXX object test/fuzztest/fuzztest/internal/domains/CMakeFiles/fuzztest_in_grammar_impl.dir/in_grammar_impl.cc.o
+[24/124] Building CXX object test/fuzztest/fuzztest/internal/domains/CMakeFiles/fuzztest_utf.dir/rune.cc.o
+[25/124] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_registry.dir/registry.cc.o
+In file included from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/domain_core.h:61,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registration.h:32,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/fixture_driver.h:38,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registry.h:30,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/internal/registry.cc:15:
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: warning: friend declaration ‘auto fuzztest::internal_no_adl::Utf8String()’ declares a non-template function [-Wnon-template-friend]
+  190 |   friend auto internal_no_adl::Utf8String();
+      |                                           ^
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: note: (if this is not what you intended, make sure the function template has already been declared and add ‘<>’ after the function name here)
+[26/124] Building CXX object test/fuzztest/fuzztest/internal/domains/CMakeFiles/fuzztest_utf.dir/utf.cc.o
+[27/124] Linking CXX static library test/fuzztest/fuzztest/internal/domains/libfuzztest_utf.a
+[28/124] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_fixture_driver.a
+[29/124] Generating Flight Tasks
+[30/124] Building CXX object boards/px4/sitl/src/CMakeFiles/drivers_board.dir/board_shutdown.cpp.o
+[31/124] Building C object boards/px4/sitl/src/CMakeFiles/drivers_board.dir/sitl_led.c.o
+[32/124] Linking CXX static library boards/px4/sitl/src/libdrivers_board.a
+[33/124] Generating combined event json file
+[34/124] Generating uORB topic headers
+[35/124] Generating px4 event header file
+[36/124] Building CXX object test/fuzztest/fuzztest/internal/domains/CMakeFiles/fuzztest_in_regexp_impl.dir/in_regexp_impl.cc.o
+[37/124] Building CXX object src/lib/perf/CMakeFiles/perf.dir/perf_counter.cpp.o
+[38/124] Building CXX object src/lib/tinybson/CMakeFiles/tinybson.dir/tinybson.cpp.o
+[39/124] Linking CXX static library src/lib/perf/libperf.a
+[40/124] Linking CXX static library src/lib/tinybson/libtinybson.a
+[41/124] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/dq_addlast.c.o
+[42/124] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/dq_rem.c.o
+[43/124] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/dq_remfirst.c.o
+[44/124] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/hrt_queue.c.o
+[45/124] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/hrt_thread.c.o
+[46/124] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/queue.c.o
+[47/124] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/hrt_work_cancel.c.o
+[48/124] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/sq_addafter.c.o
+[49/124] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/sq_remfirst.c.o
+[50/124] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/sq_addlast.c.o
+[51/124] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/work_cancel.c.o
+[52/124] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/work_lock.c.o
+[53/124] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/work_queue.c.o
+[54/124] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/work_thread.c.o
+[55/124] Generating serial_params.c
+[56/124] Linking C static library platforms/common/work_queue/libwork_queue.a
+[57/124] Building CXX object test/fuzztest/fuzztest/internal/domains/CMakeFiles/fuzztest_regexp_dfa.dir/regexp_dfa.cc.o
+[58/124] Linking CXX static library test/fuzztest/fuzztest/internal/domains/libfuzztest_regexp_dfa.a
+[59/124] Linking CXX static library test/fuzztest/fuzztest/internal/domains/libfuzztest_in_regexp_impl.a
+[60/124] Linking CXX static library test/fuzztest/fuzztest/internal/domains/libfuzztest_in_grammar_impl.a
+[61/124] Generating parameters.xml
+[62/124] Generating px4_parameters.hpp
+[63/124] Building CXX object src/lib/hysteresis/CMakeFiles/hysteresis.dir/hysteresis.cpp.o
+[64/124] Building CXX object src/lib/pid/CMakeFiles/PID.dir/PID.cpp.o
+[65/124] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/px4_posix_impl.cpp.o
+[66/124] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/px4_sem.cpp.o
+[67/124] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/tasks.cpp.o
+[68/124] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/px4_init.cpp.o
+[69/124] Building C object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/lib_crc32.c.o
+[70/124] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/cpuload.cpp.o
+[71/124] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/drv_hrt.cpp.o
+[72/124] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/print_load.cpp.o
+[73/124] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/__/__/__/__/common/Serial.cpp.o
+[74/124] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/SerialImpl.cpp.o
+[75/124] Building CXX object platforms/posix/src/px4/common/px4_daemon/CMakeFiles/px4_daemon.dir/history.cpp.o
+[76/124] Building CXX object src/lib/hysteresis/CMakeFiles/unit-Hysteresis.dir/HysteresisTest.cpp.o
+[77/124] Building CXX object platforms/posix/src/px4/common/px4_daemon/CMakeFiles/px4_daemon.dir/client.cpp.o
+[78/124] Building CXX object platforms/posix/src/px4/common/px4_daemon/CMakeFiles/px4_daemon.dir/pxh.cpp.o
+[79/124] Building CXX object src/lib/pid/CMakeFiles/unit-PID.dir/PIDTest.cpp.o
+[80/124] Building C object platforms/common/CMakeFiles/px4_platform.dir/board_common.c.o
+[81/124] Building CXX object platforms/posix/src/px4/common/px4_daemon/CMakeFiles/px4_daemon.dir/sock_protocol.cpp.o
+[82/124] Building C object platforms/common/CMakeFiles/px4_platform.dir/board_identity.c.o
+[83/124] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/external_reset_lockout.cpp.o
+[84/124] Building CXX object platforms/posix/src/px4/common/px4_daemon/CMakeFiles/px4_daemon.dir/server.cpp.o
+[85/124] Building CXX object platforms/posix/src/px4/common/px4_daemon/CMakeFiles/px4_daemon.dir/server_io.cpp.o
+[86/124] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/i2c.cpp.o
+[87/124] Building C object platforms/common/CMakeFiles/px4_platform.dir/px4_getopt.c.o
+[88/124] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/module.cpp.o
+[89/124] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/px4_cli.cpp.o
+[90/124] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/spi.cpp.o
+[91/124] Building C object platforms/common/CMakeFiles/px4_platform.dir/pab_manifest.c.o
+[92/124] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/shutdown.cpp.o
+[93/124] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/Serial.cpp.o
+[94/124] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/i2c_spi_buses.cpp.o
+[95/124] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/px4_log_history.cpp.o
+[96/124] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/px4_log.cpp.o
+[97/124] Building CXX object platforms/common/px4_work_queue/CMakeFiles/px4_work_queue.dir/WorkItem.cpp.o
+[98/124] Building CXX object platforms/common/px4_work_queue/CMakeFiles/px4_work_queue.dir/ScheduledWorkItem.cpp.o
+[99/124] Building CXX object platforms/common/px4_work_queue/CMakeFiles/px4_work_queue.dir/WorkItemSingleShot.cpp.o
+[100/124] Building CXX object src/lib/parameters/CMakeFiles/parameters.dir/atomic_transaction.cpp.o
+[101/124] Building CXX object platforms/common/px4_work_queue/CMakeFiles/px4_work_queue.dir/WorkQueue.cpp.o
+[102/124] Building CXX object platforms/common/px4_work_queue/CMakeFiles/px4_work_queue.dir/WorkQueueManager.cpp.o
+[103/124] Building CXX object src/lib/parameters/CMakeFiles/parameters.dir/param_translation_unit_tests.cpp.o
+[104/124] Building CXX object src/lib/parameters/CMakeFiles/parameters.dir/autosave.cpp.o
+[105/124] Building CXX object src/lib/parameters/CMakeFiles/parameters.dir/parameters.cpp.o
+[106/124] Linking CXX static library src/lib/parameters/libparameters.a
+[107/124] Linking CXX static library platforms/common/px4_work_queue/libpx4_work_queue.a
+[108/124] Linking CXX static library platforms/common/libpx4_platform.a
+[109/124] Linking CXX static library platforms/posix/src/px4/common/px4_daemon/libpx4_daemon.a
+[110/124] Linking CXX static library platforms/posix/src/px4/common/libpx4_layer.a
+[111/124] Linking CXX static library src/lib/hysteresis/libhysteresis.a
+[112/124] Linking CXX static library src/lib/pid/libPID.a
+[113/124] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[114/124] Linking CXX static library lib/libgtest.a
+[115/124] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_runtime.dir/runtime.cc.o
+In file included from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/domain_core.h:61,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registration.h:32,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/fixture_driver.h:38,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/runtime.h:46,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/internal/runtime.cc:15:
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: warning: friend declaration ‘auto fuzztest::internal_no_adl::Utf8String()’ declares a non-template function [-Wnon-template-friend]
+  190 |   friend auto internal_no_adl::Utf8String();
+      |                                           ^
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: note: (if this is not what you intended, make sure the function template has already been declared and add ‘<>’ after the function name here)
+[116/124] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_runtime.a
+[117/124] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_compatibility_mode.a
+[118/124] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_registry.a
+[119/124] Linking CXX static library test/fuzztest/fuzztest/libfuzztest_fuzztest_macros.a
+[120/124] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_googletest_adaptor.a
+[121/124] Linking CXX static library test/fuzztest/fuzztest/libfuzztest_init_fuzztest.a
+[122/124] Linking CXX static library test/fuzztest/fuzztest/libfuzztest_fuzztest_gtest_main.a
+[123/124] Linking CXX executable unit-Hysteresis
+[124/124] Linking CXX executable unit-PID

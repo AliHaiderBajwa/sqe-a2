@@ -1,0 +1,141 @@
+Cloning into 'PX4-Autopilot'...
+Note: switching to 'd6f12ad1c4f70ad3230afd7d86e971421e02fef4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+Updating files:  26% (3451/13221)Updating files:  26% (3528/13221)Updating files:  27% (3570/13221)Updating files:  28% (3702/13221)Updating files:  29% (3835/13221)Updating files:  29% (3960/13221)Updating files:  30% (3967/13221)Updating files:  31% (4099/13221)Updating files:  32% (4231/13221)Updating files:  33% (4363/13221)Updating files:  34% (4496/13221)Updating files:  35% (4628/13221)Updating files:  36% (4760/13221)Updating files:  37% (4892/13221)Updating files:  38% (5024/13221)Updating files:  39% (5157/13221)Updating files:  40% (5289/13221)Updating files:  41% (5421/13221)Updating files:  42% (5553/13221)Updating files:  43% (5686/13221)Updating files:  44% (5818/13221)Updating files:  45% (5950/13221)Updating files:  46% (6082/13221)Updating files:  47% (6214/13221)Updating files:  48% (6347/13221)Updating files:  49% (6479/13221)Updating files:  50% (6611/13221)Updating files:  51% (6743/13221)Updating files:  51% (6791/13221)Updating files:  52% (6875/13221)Updating files:  53% (7008/13221)Updating files:  54% (7140/13221)Updating files:  55% (7272/13221)Updating files:  56% (7404/13221)Updating files:  57% (7536/13221)Updating files:  58% (7669/13221)Updating files:  59% (7801/13221)Updating files:  60% (7933/13221)Updating files:  61% (8065/13221)Updating files:  62% (8198/13221)Updating files:  63% (8330/13221)Updating files:  64% (8462/13221)Updating files:  65% (8594/13221)Updating files:  66% (8726/13221)Updating files:  67% (8859/13221)Updating files:  68% (8991/13221)Updating files:  69% (9123/13221)Updating files:  70% (9255/13221)Updating files:  71% (9387/13221)Updating files:  72% (9520/13221)Updating files:  73% (9652/13221)Updating files:  74% (9784/13221)Updating files:  75% (9916/13221)Updating files:  76% (10048/13221)Updating files:  77% (10181/13221)Updating files:  78% (10313/13221)Updating files:  79% (10445/13221)Updating files:  80% (10577/13221)Updating files:  81% (10710/13221)Updating files:  82% (10842/13221)Updating files:  83% (10974/13221)Updating files:  84% (11106/13221)Updating files:  85% (11238/13221)Updating files:  86% (11371/13221)Updating files:  87% (11503/13221)Updating files:  88% (11635/13221)Updating files:  89% (11767/13221)Updating files:  90% (11899/13221)Updating files:  91% (12032/13221)Updating files:  92% (12164/13221)Updating files:  93% (12296/13221)Updating files:  94% (12428/13221)Updating files:  95% (12560/13221)Updating files:  96% (12693/13221)Updating files:  97% (12825/13221)Updating files:  98% (12957/13221)Updating files:  99% (13089/13221)Updating files: 100% (13221/13221)Updating files: 100% (13221/13221), done.
+Submodule 'Tools/flightgear_bridge' (https://github.com/PX4/PX4-FlightGear-Bridge.git) registered for path 'Tools/simulation/flightgear/flightgear_bridge'
+Submodule 'Tools/simulation/gazebo-classic/sitl_gazebo-classic' (https://github.com/PX4/PX4-SITL_gazebo-classic.git) registered for path 'Tools/simulation/gazebo-classic/sitl_gazebo-classic'
+Submodule 'Tools/simulation/gz' (https://github.com/PX4/PX4-gazebo-models.git) registered for path 'Tools/simulation/gz'
+Submodule 'Tools/simulation/jmavsim/jMAVSim' (https://github.com/PX4/jMAVSim.git) registered for path 'Tools/simulation/jmavsim/jMAVSim'
+Submodule 'Tools/simulation/jsbsim/jsbsim_bridge' (https://github.com/PX4/px4-jsbsim-bridge.git) registered for path 'Tools/simulation/jsbsim/jsbsim_bridge'
+Submodule 'boards/modalai/voxl2/libfc-sensor-api' (https://gitlab.com/voxl-public/voxl-sdk/core-libs/libfc-sensor-api.git) registered for path 'boards/modalai/voxl2/libfc-sensor-api'
+Submodule 'platforms/nuttx/NuttX/apps' (https://github.com/PX4/NuttX-apps.git) registered for path 'platforms/nuttx/NuttX/apps'
+Submodule 'platforms/nuttx/NuttX/nuttx' (https://github.com/PX4/NuttX.git) registered for path 'platforms/nuttx/NuttX/nuttx'
+Submodule 'src/drivers/actuators/vertiq_io/iq-module-communication-cpp' (https://github.com/PX4/iq-module-communication-cpp.git) registered for path 'src/drivers/actuators/vertiq_io/iq-module-communication-cpp'
+Submodule 'src/drivers/cyphal/legacy_data_types' (https://github.com/PX4/public_regulated_data_types.git) registered for path 'src/drivers/cyphal/legacy_data_types'
+Submodule 'src/drivers/cyphal/libcanard' (https://github.com/opencyphal/libcanard.git) registered for path 'src/drivers/cyphal/libcanard'
+Submodule 'src/drivers/cyphal/public_regulated_data_types' (https://github.com/opencyphal/public_regulated_data_types.git) registered for path 'src/drivers/cyphal/public_regulated_data_types'
+Submodule 'src/drivers/gps/devices' (https://github.com/PX4/PX4-GPSDrivers.git) registered for path 'src/drivers/gps/devices'
+Submodule 'src/drivers/ins/microstrain/mip_sdk' (https://github.com/PX4/LORD-MicroStrain_mip_sdk.git) registered for path 'src/drivers/ins/microstrain/mip_sdk'
+Submodule 'src/drivers/ins/sbgecom/sbgECom' (https://github.com/PX4/sbgECom.git) registered for path 'src/drivers/ins/sbgecom/sbgECom'
+Submodule 'src/drivers/uavcan/libdronecan/dsdl' (https://github.com/PX4/DSDL.git) registered for path 'src/drivers/uavcan/libdronecan/dsdl'
+Submodule 'src/drivers/uavcan/libdronecan/libuavcan/dsdl_compiler/pydronecan' (https://github.com/dronecan/pydronecan) registered for path 'src/drivers/uavcan/libdronecan/libuavcan/dsdl_compiler/pydronecan'
+Submodule 'src/lib/cdrstream/cyclonedds' (https://github.com/px4/cyclonedds) registered for path 'src/lib/cdrstream/cyclonedds'
+Submodule 'src/lib/cdrstream/rosidl' (https://github.com/px4/rosidl) registered for path 'src/lib/cdrstream/rosidl'
+Submodule 'src/lib/crypto/libtomcrypt' (https://github.com/PX4/libtomcrypt.git) registered for path 'src/lib/crypto/libtomcrypt'
+Submodule 'src/lib/crypto/libtommath' (https://github.com/PX4/libtommath.git) registered for path 'src/lib/crypto/libtommath'
+Submodule 'src/lib/crypto/monocypher' (https://github.com/PX4/Monocypher.git) registered for path 'src/lib/crypto/monocypher'
+Submodule 'src/lib/events/libevents' (https://github.com/mavlink/libevents.git) registered for path 'src/lib/events/libevents'
+Submodule 'src/lib/heatshrink/heatshrink' (https://github.com/PX4/heatshrink.git) registered for path 'src/lib/heatshrink/heatshrink'
+Submodule 'src/lib/tensorflow_lite_micro/tflite_micro' (https://github.com/PX4/tflite-micro.git) registered for path 'src/lib/tensorflow_lite_micro/tflite_micro'
+Submodule 'src/modules/mavlink/mavlink' (https://github.com/mavlink/mavlink.git) registered for path 'src/modules/mavlink/mavlink'
+Submodule 'src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client' (https://github.com/PX4/Micro-XRCE-DDS-Client.git) registered for path 'src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client'
+Submodule 'src/modules/zenoh/zenoh-pico' (https://github.com/px4/zenoh-pico) registered for path 'src/modules/zenoh/zenoh-pico'
+Submodule 'test/fuzztest' (https://github.com/google/fuzztest.git) registered for path 'test/fuzztest'
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/Tools/simulation/flightgear/flightgear_bridge'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/Tools/simulation/gazebo-classic/sitl_gazebo-classic'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/Tools/simulation/gz'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/Tools/simulation/jmavsim/jMAVSim'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/Tools/simulation/jsbsim/jsbsim_bridge'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/boards/modalai/voxl2/libfc-sensor-api'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/platforms/nuttx/NuttX/apps'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/platforms/nuttx/NuttX/nuttx'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/drivers/actuators/vertiq_io/iq-module-communication-cpp'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/drivers/cyphal/legacy_data_types'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/drivers/cyphal/libcanard'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/drivers/cyphal/public_regulated_data_types'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/drivers/gps/devices'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/drivers/ins/microstrain/mip_sdk'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/drivers/ins/sbgecom/sbgECom'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/drivers/uavcan/libdronecan/dsdl'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/drivers/uavcan/libdronecan/libuavcan/dsdl_compiler/pydronecan'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/lib/cdrstream/cyclonedds'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/lib/cdrstream/rosidl'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/lib/crypto/libtomcrypt'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/lib/crypto/libtommath'...
+fatal: unable to access 'https://github.com/PX4/libtommath.git/': Failed to connect to github.com port 443 after 1102 ms: Couldn't connect to server
+fatal: clone of 'https://github.com/PX4/libtommath.git' into submodule path '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/lib/crypto/libtommath' failed
+Failed to clone 'src/lib/crypto/libtommath'. Retry scheduled
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/lib/crypto/monocypher'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/lib/events/libevents'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/lib/heatshrink/heatshrink'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/lib/tensorflow_lite_micro/tflite_micro'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/modules/mavlink/mavlink'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/modules/zenoh/zenoh-pico'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/test/fuzztest'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/lib/crypto/libtommath'...
+Submodule path 'Tools/simulation/flightgear/flightgear_bridge': checked out 'f47ce7b5fbbb3aa43d33d2be1f6cd3746b13d5bf'
+Submodule 'models/FlightGear-Rascal' (https://github.com/ThunderFly-aerospace/FlightGear-Rascal.git) registered for path 'Tools/simulation/flightgear/flightgear_bridge/models/Rascal'
+Submodule 'models/FlightGear-TF-G1' (https://github.com/ThunderFly-aerospace/FlightGear-TF-G1.git) registered for path 'Tools/simulation/flightgear/flightgear_bridge/models/TF-G1'
+Submodule 'models/FlightGear-TF-G2' (https://github.com/ThunderFly-aerospace/FlightGear-TF-G2.git) registered for path 'Tools/simulation/flightgear/flightgear_bridge/models/TF-G2'
+Submodule 'models/FlightGear-TF-R1' (https://github.com/ThunderFly-aerospace/FlightGear-TF-R1.git) registered for path 'Tools/simulation/flightgear/flightgear_bridge/models/TF-R1'
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/Tools/simulation/flightgear/flightgear_bridge/models/Rascal'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/Tools/simulation/flightgear/flightgear_bridge/models/TF-G1'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/Tools/simulation/flightgear/flightgear_bridge/models/TF-G2'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/Tools/simulation/flightgear/flightgear_bridge/models/TF-R1'...
+Submodule path 'Tools/simulation/flightgear/flightgear_bridge/models/Rascal': checked out 'cbdb2fc7dd44331da1dcd04a891ed7f8c27b1ef0'
+Submodule path 'Tools/simulation/flightgear/flightgear_bridge/models/TF-G1': checked out 'fdb6dd685f55097230c0eb29aa7e9f5b8d0abf1e'
+Submodule path 'Tools/simulation/flightgear/flightgear_bridge/models/TF-G2': checked out '99529413531106836f4303c5389928a4fef04b05'
+Submodule path 'Tools/simulation/flightgear/flightgear_bridge/models/TF-R1': checked out '158e429a0110589b1e2adfe868e166271470e144'
+Submodule path 'Tools/simulation/gazebo-classic/sitl_gazebo-classic': checked out '6697ab169ceab512dc706acea63df4c882662c60'
+Submodule 'external/OpticalFlow' (https://github.com/PX4/OpticalFlow.git) registered for path 'Tools/simulation/gazebo-classic/sitl_gazebo-classic/external/OpticalFlow'
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/Tools/simulation/gazebo-classic/sitl_gazebo-classic/external/OpticalFlow'...
+Submodule path 'Tools/simulation/gazebo-classic/sitl_gazebo-classic/external/OpticalFlow': checked out '28ef45c1fcb532b2bfd54c16b059c6a545143b2f'
+Submodule 'external/klt_feature_tracker' (https://github.com/ethz-ait/klt_feature_tracker.git) registered for path 'Tools/simulation/gazebo-classic/sitl_gazebo-classic/external/OpticalFlow/external/klt_feature_tracker'
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/Tools/simulation/gazebo-classic/sitl_gazebo-classic/external/OpticalFlow/external/klt_feature_tracker'...
+Submodule path 'Tools/simulation/gazebo-classic/sitl_gazebo-classic/external/OpticalFlow/external/klt_feature_tracker': checked out '9b5b567ae77f93d1ef4d36151529ba2506a46e7a'
+Submodule path 'Tools/simulation/gz': checked out 'b6127f4ec20de867e215fb5f78ae88b80f371909'
+Submodule path 'Tools/simulation/jmavsim/jMAVSim': checked out '66b764ada522893c05224950aa6268c809f8e48a'
+Submodule 'jMAVlib' (https://github.com/PX4/jMAVlib.git) registered for path 'Tools/simulation/jmavsim/jMAVSim/jMAVlib'
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/Tools/simulation/jmavsim/jMAVSim/jMAVlib'...
+Submodule path 'Tools/simulation/jmavsim/jMAVSim/jMAVlib': checked out 'c08380767b21938391bec676a43b36b837af9ba4'
+Submodule path 'Tools/simulation/jsbsim/jsbsim_bridge': checked out 'f37ec259bd7a43565fe0ff4722465b7a303200f6'
+Submodule 'models/ATI-Resolution' (https://github.com/FGMEMBERS/ATI-Resolution.git) registered for path 'Tools/simulation/jsbsim/jsbsim_bridge/models/ATI-Resolution'
+Submodule 'models/Rascal' (https://github.com/Auterion/FlightGear-Rascal.git) registered for path 'Tools/simulation/jsbsim/jsbsim_bridge/models/Rascal'
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/Tools/simulation/jsbsim/jsbsim_bridge/models/ATI-Resolution'...
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/Tools/simulation/jsbsim/jsbsim_bridge/models/Rascal'...
+Submodule path 'Tools/simulation/jsbsim/jsbsim_bridge/models/ATI-Resolution': checked out '40571cd808a204f4062128daeb6bb6db8c134c48'
+Submodule path 'Tools/simulation/jsbsim/jsbsim_bridge/models/Rascal': checked out 'd0d1db1961549e557885002cf9c3cff40cc27be2'
+Submodule path 'boards/modalai/voxl2/libfc-sensor-api': checked out '85151aaf6ba8b24ce82b387e088452c63f7e2096'
+Submodule path 'platforms/nuttx/NuttX/apps': checked out 'e37940d8535f603a16b8f6f21c21edaf584218aa'
+Submodule path 'platforms/nuttx/NuttX/nuttx': checked out 'fb2fadf6f599c1406f052db013efd00a2518e72c'
+Submodule path 'src/drivers/actuators/vertiq_io/iq-module-communication-cpp': checked out 'c488af4e8807de80739aa48efd2ea51614dd8195'
+Submodule path 'src/drivers/cyphal/legacy_data_types': checked out '36a01e428b110ff84c8babe5b65667b5e3037d5e'
+Submodule path 'src/drivers/cyphal/libcanard': checked out '5c69d451ab0787a81dcb615692d707f2a286f5e5'
+Submodule path 'src/drivers/cyphal/public_regulated_data_types': checked out 'd0bd6516dac8ff61287fe49a9f2c75e7d4dc1b8e'
+Submodule path 'src/drivers/gps/devices': checked out '0b9695881bd1e8f830ab4538ab3acc0050019eba'
+Submodule path 'src/drivers/ins/microstrain/mip_sdk': checked out '35596994b60ba89fe02f71ce5127baa5e7ff2bbf'
+Submodule path 'src/drivers/ins/sbgecom/sbgECom': checked out '80b121c7714083cc4868c0fdb8c41623c7ef9c93'
+Submodule path 'src/drivers/uavcan/libdronecan/dsdl': checked out '993be80a62ec957c01fb41115b83663959a49f46'
+Submodule path 'src/drivers/uavcan/libdronecan/libuavcan/dsdl_compiler/pydronecan': checked out '19fdf2e5b383243ccdb1094edae0603cf11469e8'
+Submodule path 'src/lib/cdrstream/cyclonedds': checked out '314887ca403c2fb0a0316add22672102936ed36c'
+Submodule path 'src/lib/cdrstream/rosidl': checked out 'bf5682e4747843d1d5133b9a2b54ce6f12f166c7'
+Submodule path 'src/lib/crypto/libtomcrypt': checked out '673f5ce29015a9bba3c96792920a10601b5b0718'
+Submodule path 'src/lib/crypto/libtommath': checked out 'fd73d7630b9d3ed5a79d613ff680a549e9780de7'
+Submodule path 'src/lib/crypto/monocypher': checked out 'baca5d31259c598540e4d1284bc8d8f793abf83a'
+Submodule path 'src/lib/events/libevents': checked out '9ef591c447fe0386d698bf6fb9a6d27e43988ee4'
+Submodule path 'src/lib/heatshrink/heatshrink': checked out '052e6de72f67f1777198bce98f3de62f7f3c16a0'
+Submodule path 'src/lib/tensorflow_lite_micro/tflite_micro': checked out '3c0b1e3091e4ea423e1bf9da89d41d09517eb0c9'
+Submodule path 'src/modules/mavlink/mavlink': checked out '33af200d25ec6f0925b49b1ba82bbf1294ea5f72'
+Submodule 'pymavlink' (https://github.com/ardupilot/pymavlink.git) registered for path 'src/modules/mavlink/mavlink/pymavlink'
+Cloning into '/home/zexr/Desktop/sqe A2/PX4-Autopilot/src/modules/mavlink/mavlink/pymavlink'...
+Submodule path 'src/modules/mavlink/mavlink/pymavlink': checked out 'fcaa2c7d25e3169dc66155929c338487941555e9'
+Submodule path 'src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client': checked out '711aef423edd1820347b866d1e4164832df35d04'
+Submodule path 'src/modules/zenoh/zenoh-pico': checked out '6ec4dc1995f185330e4f6faa8c719eb86f180deb'
+Submodule path 'test/fuzztest': checked out '1e47f9d7437de5c3ee4cb0ac860d5ec875478059'
+Submodule path 'src/lib/crypto/libtommath': checked out 'fd73d7630b9d3ed5a79d613ff680a549e9780de7'

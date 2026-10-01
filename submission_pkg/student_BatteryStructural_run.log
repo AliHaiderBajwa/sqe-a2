@@ -1,0 +1,70 @@
+ERROR [px4_work_queue] not running
+ERROR [px4_work_queue] wq:lp_default not available
+ERROR [px4_work_queue] init failed
+[==========] Running 29 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 29 tests from BatteryStructural
+[ RUN      ] BatteryStructural.WarningLadderRungs
+[       OK ] BatteryStructural.WarningLadderRungs (0 ms)
+[ RUN      ] BatteryStructural.WarningExactThresholdTakesHigherRung
+[       OK ] BatteryStructural.WarningExactThresholdTakesHigherRung (0 ms)
+[ RUN      ] BatteryStructural.LowVoltageForcesUnconnected
+[       OK ] BatteryStructural.LowVoltageForcesUnconnected (0 ms)
+[ RUN      ] BatteryStructural.WarningHeldUntilInitialized
+[       OK ] BatteryStructural.WarningHeldUntilInitialized (0 ms)
+[ RUN      ] BatteryStructural.RlsResetGateFiresPreInit
+[       OK ] BatteryStructural.RlsResetGateFiresPreInit (0 ms)
+[ RUN      ] BatteryStructural.RlsResetGateBlockedWhenUnconnected
+[       OK ] BatteryStructural.RlsResetGateBlockedWhenUnconnected (0 ms)
+[ RUN      ] BatteryStructural.RlsResetGateOnlyPreInit
+[       OK ] BatteryStructural.RlsResetGateOnlyPreInit (0 ms)
+[ RUN      ] BatteryStructural.RlsResetGateBlockedWhenResistanceInvalidated
+[       OK ] BatteryStructural.RlsResetGateBlockedWhenResistanceInvalidated (0 ms)
+[ RUN      ] BatteryStructural.RlsResetGateBlockedWhenNoCells
+[       OK ] BatteryStructural.RlsResetGateBlockedWhenNoCells (0 ms)
+[ RUN      ] BatteryStructural.SpikeFaultAboveBoundary
+[       OK ] BatteryStructural.SpikeFaultAboveBoundary (0 ms)
+[ RUN      ] BatteryStructural.SpikeFaultExactlyAtBoundaryIsClean
+[       OK ] BatteryStructural.SpikeFaultExactlyAtBoundaryIsClean (0 ms)
+[ RUN      ] BatteryStructural.SpikeFaultNeedsCells
+[       OK ] BatteryStructural.SpikeFaultNeedsCells (0 ms)
+[ RUN      ] BatteryStructural.SocFusesAndDischargesMonotonically
+[       OK ] BatteryStructural.SocFusesAndDischargesMonotonically (0 ms)
+[ RUN      ] BatteryStructural.DtClampCapsDischargeIncrement
+[       OK ] BatteryStructural.DtClampCapsDischargeIncrement (0 ms)
+[ RUN      ] BatteryStructural.ScaleClampedToBand
+[       OK ] BatteryStructural.ScaleClampedToBand (0 ms)
+[ RUN      ] BatteryStructural.ScaleFallsBackOnNonFinite
+[       OK ] BatteryStructural.ScaleFallsBackOnNonFinite (0 ms)
+[ RUN      ] BatteryStructural.RemainingTimeNeedsCapacity
+[       OK ] BatteryStructural.RemainingTimeNeedsCapacity (0 ms)
+[ RUN      ] BatteryStructural.RemainingTimeUnarmedUsesAverage
+[       OK ] BatteryStructural.RemainingTimeUnarmedUsesAverage (0 ms)
+[ RUN      ] BatteryStructural.ArmedMultirotorUpdatesAverage
+[       OK ] BatteryStructural.ArmedMultirotorUpdatesAverage (0 ms)
+[ RUN      ] BatteryStructural.ArmedFixedWingWithStalePhaseHoldsAverage
+[       OK ] BatteryStructural.ArmedFixedWingWithStalePhaseHoldsAverage (0 ms)
+[ RUN      ] BatteryStructural.OutOfRangeIndexClampsToOne
+ERROR [battery] Battery index must be between 1 and 9 (inclusive). Received 99. Defaulting to 1.
+[       OK ] BatteryStructural.OutOfRangeIndexClampsToOne (0 ms)
+[ RUN      ] BatteryStructural.TemperatureRelayedToStatus
+[       OK ] BatteryStructural.TemperatureRelayedToStatus (0 ms)
+[ RUN      ] BatteryStructural.UpdateAndPublishMatchesSource
+[       OK ] BatteryStructural.UpdateAndPublishMatchesSource (0 ms)
+[ RUN      ] BatteryStructural.UpdateAndPublishSkipsOnSourceMismatch
+[       OK ] BatteryStructural.UpdateAndPublishSkipsOnSourceMismatch (0 ms)
+[ RUN      ] BatteryStructural.UserInternalResistanceUsedInReset
+[       OK ] BatteryStructural.UserInternalResistanceUsedInReset (0 ms)
+[ RUN      ] BatteryStructural.UserInternalResistanceCorrectsCellVoltage
+[       OK ] BatteryStructural.UserInternalResistanceCorrectsCellVoltage (0 ms)
+[ RUN      ] BatteryStructural.ArmedFixedWingWithFreshLevelPhaseUpdatesAverage
+[       OK ] BatteryStructural.ArmedFixedWingWithFreshLevelPhaseUpdatesAverage (0 ms)
+[ RUN      ] BatteryStructural.ArmedFixedWingZeroDtUpdatesAverageWithoutDt
+[       OK ] BatteryStructural.ArmedFixedWingZeroDtUpdatesAverageWithoutDt (0 ms)
+[ RUN      ] BatteryStructural.ArmedFixedWingNonLevelPhaseHoldsAverage
+[       OK ] BatteryStructural.ArmedFixedWingNonLevelPhaseHoldsAverage (0 ms)
+[----------] 29 tests from BatteryStructural (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 29 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 29 tests.

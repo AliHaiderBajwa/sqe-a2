@@ -1,0 +1,4 @@
+/bin/sh: 1: PID: not found
+/bin/sh: 1: PID: not found
+Error: /home/zexr/Desktop/sqe A2/PX4-Autopilot/build/px4_sitl_test is not a directory
+make: *** [Makefile:411: tests] Error 1

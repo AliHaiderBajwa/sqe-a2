@@ -1,0 +1,456 @@
+[1/387] Building CXX object _deps/abseil-cpp-build/absl/base/CMakeFiles/base.dir/internal/cycleclock.cc.o
+[2/387] Building CXX object _deps/abseil-cpp-build/absl/base/CMakeFiles/spinlock_wait.dir/internal/spinlock_wait.cc.o
+[3/387] Linking CXX static library _deps/abseil-cpp-build/absl/base/libabsl_spinlock_wait.a
+[4/387] Building CXX object _deps/abseil-cpp-build/absl/base/CMakeFiles/log_severity.dir/log_severity.cc.o
+[5/387] Linking CXX static library _deps/abseil-cpp-build/absl/base/libabsl_log_severity.a
+[6/387] Building CXX object _deps/abseil-cpp-build/absl/base/CMakeFiles/base.dir/internal/unscaledcycleclock.cc.o
+[7/387] Building CXX object _deps/abseil-cpp-build/absl/base/CMakeFiles/raw_logging_internal.dir/internal/raw_logging.cc.o
+[8/387] Linking CXX static library _deps/abseil-cpp-build/absl/base/libabsl_raw_logging_internal.a
+[9/387] Building CXX object _deps/abseil-cpp-build/absl/base/CMakeFiles/base.dir/internal/spinlock.cc.o
+[10/387] Building CXX object _deps/abseil-cpp-build/absl/base/CMakeFiles/tracing_internal.dir/internal/tracing.cc.o
+[11/387] Building CXX object _deps/abseil-cpp-build/absl/base/CMakeFiles/base.dir/internal/sysinfo.cc.o
+[12/387] Building CXX object _deps/abseil-cpp-build/absl/base/CMakeFiles/base.dir/internal/thread_identity.cc.o
+[13/387] Linking CXX static library _deps/abseil-cpp-build/absl/base/libabsl_base.a
+[14/387] Linking CXX static library _deps/abseil-cpp-build/absl/base/libabsl_tracing_internal.a
+[15/387] Building CXX object _deps/abseil-cpp-build/absl/base/CMakeFiles/malloc_internal.dir/internal/low_level_alloc.cc.o
+[16/387] Linking CXX static library _deps/abseil-cpp-build/absl/base/libabsl_malloc_internal.a
+[17/387] Building CXX object _deps/abseil-cpp-build/absl/base/CMakeFiles/strerror.dir/internal/strerror.cc.o
+[18/387] Building CXX object _deps/abseil-cpp-build/absl/base/CMakeFiles/throw_delegate.dir/internal/throw_delegate.cc.o
+[19/387] Linking CXX static library _deps/abseil-cpp-build/absl/base/libabsl_strerror.a
+[20/387] Linking CXX static library _deps/abseil-cpp-build/absl/base/libabsl_throw_delegate.a
+[21/387] Building CXX object _deps/abseil-cpp-build/absl/crc/CMakeFiles/crc_cpu_detect.dir/internal/cpu_detect.cc.o
+[22/387] Linking CXX static library _deps/abseil-cpp-build/absl/crc/libabsl_crc_cpu_detect.a
+[23/387] Building CXX object _deps/abseil-cpp-build/absl/container/CMakeFiles/hashtablez_sampler.dir/internal/hashtablez_sampler_force_weak_definition.cc.o
+[24/387] Building CXX object _deps/abseil-cpp-build/absl/crc/CMakeFiles/crc_internal.dir/internal/crc_x86_arm_combined.cc.o
+[25/387] Building CXX object _deps/abseil-cpp-build/absl/crc/CMakeFiles/crc_internal.dir/internal/crc.cc.o
+[26/387] Linking CXX static library _deps/abseil-cpp-build/absl/crc/libabsl_crc_internal.a
+[27/387] Building CXX object _deps/abseil-cpp-build/absl/container/CMakeFiles/hashtablez_sampler.dir/internal/hashtablez_sampler.cc.o
+[28/387] Building CXX object _deps/abseil-cpp-build/absl/crc/CMakeFiles/crc32c.dir/crc32c.cc.o
+[29/387] Building CXX object _deps/abseil-cpp-build/absl/crc/CMakeFiles/crc32c.dir/internal/crc_memcpy_fallback.cc.o
+[30/387] Building CXX object _deps/abseil-cpp-build/absl/crc/CMakeFiles/crc32c.dir/internal/crc_memcpy_x86_arm_combined.cc.o
+[31/387] Building CXX object _deps/abseil-cpp-build/absl/container/CMakeFiles/raw_hash_set.dir/internal/raw_hash_set.cc.o
+[32/387] Building CXX object _deps/abseil-cpp-build/absl/debugging/CMakeFiles/stacktrace.dir/stacktrace.cc.o
+[33/387] Building CXX object _deps/abseil-cpp-build/absl/crc/CMakeFiles/crc32c.dir/internal/crc_non_temporal_memcpy.cc.o
+[34/387] Building CXX object _deps/abseil-cpp-build/absl/debugging/CMakeFiles/failure_signal_handler.dir/failure_signal_handler.cc.o
+[35/387] Building CXX object _deps/abseil-cpp-build/absl/debugging/CMakeFiles/debugging_internal.dir/internal/address_is_readable.cc.o
+[36/387] Building CXX object _deps/abseil-cpp-build/absl/debugging/CMakeFiles/debugging_internal.dir/internal/elf_mem_image.cc.o
+[37/387] Building CXX object _deps/abseil-cpp-build/absl/debugging/CMakeFiles/debugging_internal.dir/internal/vdso_support.cc.o
+[38/387] Building CXX object _deps/abseil-cpp-build/absl/debugging/CMakeFiles/examine_stack.dir/internal/examine_stack.cc.o
+[39/387] Linking CXX static library _deps/abseil-cpp-build/absl/debugging/libabsl_debugging_internal.a
+[40/387] Linking CXX static library _deps/abseil-cpp-build/absl/debugging/libabsl_stacktrace.a
+[41/387] Building CXX object _deps/abseil-cpp-build/absl/debugging/CMakeFiles/utf8_for_code_point.dir/internal/utf8_for_code_point.cc.o
+[42/387] Linking CXX static library _deps/abseil-cpp-build/absl/debugging/libabsl_utf8_for_code_point.a
+[43/387] Building CXX object _deps/abseil-cpp-build/absl/debugging/CMakeFiles/leak_check.dir/leak_check.cc.o
+[44/387] Building CXX object _deps/abseil-cpp-build/absl/crc/CMakeFiles/crc_cord_state.dir/internal/crc_cord_state.cc.o
+[45/387] Linking CXX static library _deps/abseil-cpp-build/absl/debugging/libabsl_leak_check.a
+[46/387] Building CXX object _deps/abseil-cpp-build/absl/debugging/CMakeFiles/symbolize.dir/symbolize.cc.o
+[47/387] Building CXX object _deps/abseil-cpp-build/absl/debugging/CMakeFiles/demangle_rust.dir/internal/demangle_rust.cc.o
+[48/387] Building CXX object _deps/abseil-cpp-build/absl/flags/CMakeFiles/flags_commandlineflag_internal.dir/internal/commandlineflag.cc.o
+[49/387] Linking CXX static library _deps/abseil-cpp-build/absl/flags/libabsl_flags_commandlineflag_internal.a
+[50/387] Building CXX object _deps/abseil-cpp-build/absl/debugging/CMakeFiles/decode_rust_punycode.dir/internal/decode_rust_punycode.cc.o
+[51/387] Linking CXX static library _deps/abseil-cpp-build/absl/debugging/libabsl_decode_rust_punycode.a
+[52/387] Linking CXX static library _deps/abseil-cpp-build/absl/debugging/libabsl_demangle_rust.a
+[53/387] Building CXX object _deps/abseil-cpp-build/absl/flags/CMakeFiles/flags_config.dir/usage_config.cc.o
+[54/387] Building CXX object _deps/abseil-cpp-build/absl/flags/CMakeFiles/flags_commandlineflag.dir/commandlineflag.cc.o
+[55/387] Building CXX object _deps/abseil-cpp-build/absl/flags/CMakeFiles/flags_private_handle_accessor.dir/internal/private_handle_accessor.cc.o
+[56/387] Building CXX object _deps/abseil-cpp-build/absl/flags/CMakeFiles/flags_program_name.dir/internal/program_name.cc.o
+[57/387] Building CXX object _deps/abseil-cpp-build/absl/debugging/CMakeFiles/demangle_internal.dir/internal/demangle.cc.o
+[58/387] Linking CXX static library _deps/abseil-cpp-build/absl/debugging/libabsl_demangle_internal.a
+[59/387] Building CXX object _deps/abseil-cpp-build/absl/flags/CMakeFiles/flags_internal.dir/internal/flag.cc.o
+[60/387] Building CXX object _deps/abseil-cpp-build/absl/flags/CMakeFiles/flags_marshalling.dir/marshalling.cc.o
+[61/387] Building CXX object _deps/abseil-cpp-build/absl/flags/CMakeFiles/flags_usage.dir/usage.cc.o
+[62/387] Building CXX object _deps/abseil-cpp-build/absl/hash/CMakeFiles/city.dir/internal/city.cc.o
+[63/387] Linking CXX static library _deps/abseil-cpp-build/absl/hash/libabsl_city.a
+[64/387] Building CXX object _deps/abseil-cpp-build/absl/hash/CMakeFiles/hash.dir/internal/hash.cc.o
+[65/387] Building CXX object _deps/abseil-cpp-build/absl/log/CMakeFiles/log_internal_conditions.dir/internal/conditions.cc.o
+[66/387] Linking CXX static library _deps/abseil-cpp-build/absl/log/libabsl_log_internal_conditions.a
+[67/387] Building CXX object _deps/abseil-cpp-build/absl/hash/CMakeFiles/low_level_hash.dir/internal/low_level_hash.cc.o
+[68/387] Building CXX object _deps/abseil-cpp-build/absl/flags/CMakeFiles/flags_usage_internal.dir/internal/usage.cc.o
+[69/387] Building CXX object _deps/abseil-cpp-build/absl/log/CMakeFiles/log_internal_check_op.dir/internal/check_op.cc.o
+[70/387] Building CXX object _deps/abseil-cpp-build/absl/flags/CMakeFiles/flags_reflection.dir/reflection.cc.o
+[71/387] Building CXX object _deps/abseil-cpp-build/absl/log/CMakeFiles/log_internal_format.dir/internal/log_format.cc.o
+[72/387] Building CXX object _deps/abseil-cpp-build/absl/log/CMakeFiles/log_internal_proto.dir/internal/proto.cc.o
+[73/387] Building CXX object _deps/abseil-cpp-build/absl/log/CMakeFiles/log_internal_nullguard.dir/internal/nullguard.cc.o
+[74/387] Building CXX object _deps/abseil-cpp-build/absl/log/CMakeFiles/log_internal_globals.dir/internal/globals.cc.o
+[75/387] Linking CXX static library _deps/abseil-cpp-build/absl/log/libabsl_log_internal_nullguard.a
+[76/387] Building CXX object _deps/abseil-cpp-build/absl/flags/CMakeFiles/flags_parse.dir/parse.cc.o
+[77/387] Building CXX object _deps/abseil-cpp-build/absl/log/CMakeFiles/log_internal_message.dir/internal/log_message.cc.o
+[78/387] Building CXX object _deps/abseil-cpp-build/absl/log/CMakeFiles/log_sink.dir/log_sink.cc.o
+[79/387] Building CXX object _deps/abseil-cpp-build/absl/log/CMakeFiles/log_internal_structured_proto.dir/internal/structured_proto.cc.o
+[80/387] Building CXX object _deps/abseil-cpp-build/absl/log/CMakeFiles/log_internal_log_sink_set.dir/internal/log_sink_set.cc.o
+[81/387] Building CXX object _deps/abseil-cpp-build/absl/profiling/CMakeFiles/exponential_biased.dir/internal/exponential_biased.cc.o
+[82/387] Linking CXX static library _deps/abseil-cpp-build/absl/profiling/libabsl_exponential_biased.a
+[83/387] Building CXX object _deps/abseil-cpp-build/absl/log/CMakeFiles/log_internal_fnmatch.dir/internal/fnmatch.cc.o
+[84/387] Building CXX object _deps/abseil-cpp-build/absl/numeric/CMakeFiles/int128.dir/int128.cc.o
+[85/387] Linking CXX static library _deps/abseil-cpp-build/absl/numeric/libabsl_int128.a
+[86/387] Linking CXX static library _deps/abseil-cpp-build/absl/hash/libabsl_low_level_hash.a
+[87/387] Building CXX object _deps/abseil-cpp-build/absl/log/CMakeFiles/vlog_config_internal.dir/internal/vlog_config.cc.o
+[88/387] Building CXX object _deps/abseil-cpp-build/absl/random/CMakeFiles/random_seed_gen_exception.dir/seed_gen_exception.cc.o
+[89/387] Building CXX object _deps/abseil-cpp-build/absl/random/CMakeFiles/random_distributions.dir/gaussian_distribution.cc.o
+[90/387] Linking CXX static library _deps/abseil-cpp-build/absl/random/libabsl_random_seed_gen_exception.a
+[91/387] Building CXX object _deps/abseil-cpp-build/absl/random/CMakeFiles/random_internal_platform.dir/internal/randen_round_keys.cc.o
+[92/387] Building CXX object _deps/abseil-cpp-build/absl/log/CMakeFiles/log_globals.dir/globals.cc.o
+[93/387] Linking CXX static library _deps/abseil-cpp-build/absl/random/libabsl_random_internal_platform.a
+[94/387] Building CXX object _deps/abseil-cpp-build/absl/random/CMakeFiles/random_distributions.dir/discrete_distribution.cc.o
+[95/387] Building CXX object _deps/abseil-cpp-build/absl/random/CMakeFiles/random_internal_randen.dir/internal/randen.cc.o
+[96/387] Building CXX object _deps/abseil-cpp-build/absl/random/CMakeFiles/random_internal_seed_material.dir/internal/seed_material.cc.o
+[97/387] Building CXX object _deps/abseil-cpp-build/absl/random/CMakeFiles/random_internal_entropy_pool.dir/internal/entropy_pool.cc.o
+[98/387] Building CXX object _deps/abseil-cpp-build/absl/random/CMakeFiles/random_internal_randen_hwaes.dir/internal/randen_detect.cc.o
+[99/387] Building CXX object _deps/abseil-cpp-build/absl/random/CMakeFiles/random_seed_sequences.dir/seed_sequences.cc.o
+[100/387] Building CXX object _deps/abseil-cpp-build/absl/random/CMakeFiles/random_internal_randen_slow.dir/internal/randen_slow.cc.o
+[101/387] Linking CXX static library _deps/abseil-cpp-build/absl/random/libabsl_random_internal_randen_slow.a
+[102/387] Building CXX object _deps/abseil-cpp-build/absl/random/CMakeFiles/random_internal_randen_hwaes_impl.dir/internal/randen_hwaes.cc.o
+[103/387] Linking CXX static library _deps/abseil-cpp-build/absl/random/libabsl_random_internal_randen_hwaes_impl.a
+[104/387] Linking CXX static library _deps/abseil-cpp-build/absl/random/libabsl_random_internal_randen_hwaes.a
+[105/387] Linking CXX static library _deps/abseil-cpp-build/absl/random/libabsl_random_internal_randen.a
+[106/387] Building CXX object _deps/abseil-cpp-build/absl/status/CMakeFiles/status.dir/status_payload_printer.cc.o
+[107/387] Building CXX object _deps/abseil-cpp-build/absl/status/CMakeFiles/status.dir/internal/status_internal.cc.o
+[108/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/string_view.dir/string_view.cc.o
+[109/387] Linking CXX static library _deps/abseil-cpp-build/absl/strings/libabsl_string_view.a
+[110/387] Building CXX object _deps/abseil-cpp-build/absl/status/CMakeFiles/statusor.dir/statusor.cc.o
+[111/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings.dir/ascii.cc.o
+[112/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings.dir/charconv.cc.o
+[113/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings.dir/internal/charconv_parse.cc.o
+[114/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings.dir/internal/damerau_levenshtein_distance.cc.o
+[115/387] Building CXX object _deps/abseil-cpp-build/absl/status/CMakeFiles/status.dir/status.cc.o
+[116/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings.dir/internal/memutil.cc.o
+[117/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings.dir/internal/stringify_sink.cc.o
+[118/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings.dir/escaping.cc.o
+[119/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings.dir/internal/charconv_bigint.cc.o
+[120/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings.dir/str_cat.cc.o
+[121/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings.dir/match.cc.o
+[122/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings_internal.dir/internal/utf8.cc.o
+[123/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings.dir/str_split.cc.o
+[124/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings_internal.dir/internal/ostringstream.cc.o
+[125/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings.dir/str_replace.cc.o
+[126/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings.dir/numbers.cc.o
+[127/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings.dir/substitute.cc.o
+[128/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/str_format_internal.dir/internal/str_format/extension.cc.o
+[129/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/str_format_internal.dir/internal/str_format/output.cc.o
+[130/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/strings_internal.dir/internal/escaping.cc.o
+[131/387] Linking CXX static library _deps/abseil-cpp-build/absl/strings/libabsl_strings_internal.a
+[132/387] Linking CXX static library _deps/abseil-cpp-build/absl/strings/libabsl_strings.a
+[133/387] Linking CXX static library _deps/abseil-cpp-build/absl/debugging/libabsl_symbolize.a
+[134/387] Linking CXX static library _deps/abseil-cpp-build/absl/debugging/libabsl_examine_stack.a
+[135/387] Linking CXX static library _deps/abseil-cpp-build/absl/debugging/libabsl_failure_signal_handler.a
+[136/387] Linking CXX static library _deps/abseil-cpp-build/absl/flags/libabsl_flags_commandlineflag.a
+[137/387] Linking CXX static library _deps/abseil-cpp-build/absl/flags/libabsl_flags_private_handle_accessor.a
+[138/387] Linking CXX static library _deps/abseil-cpp-build/absl/hash/libabsl_hash.a
+[139/387] Linking CXX static library _deps/abseil-cpp-build/absl/log/libabsl_log_internal_proto.a
+[140/387] Linking CXX static library _deps/abseil-cpp-build/absl/log/libabsl_log_internal_structured_proto.a
+[141/387] Linking CXX static library _deps/abseil-cpp-build/absl/log/libabsl_log_internal_fnmatch.a
+[142/387] Linking CXX static library _deps/abseil-cpp-build/absl/random/libabsl_random_distributions.a
+[143/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/str_format_internal.dir/internal/str_format/bind.cc.o
+[144/387] Linking CXX static library _deps/abseil-cpp-build/absl/random/libabsl_random_internal_seed_material.a
+[145/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/str_format_internal.dir/internal/str_format/parser.cc.o
+[146/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/str_format_internal.dir/internal/str_format/arg.cc.o
+[147/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/cord_internal.dir/internal/cord_rep_btree_navigator.cc.o
+[148/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/cord_internal.dir/internal/cord_rep_btree_reader.cc.o
+[149/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/str_format_internal.dir/internal/str_format/float_conversion.cc.o
+[150/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/cord_internal.dir/internal/cord_internal.cc.o
+[151/387] Linking CXX static library _deps/abseil-cpp-build/absl/strings/libabsl_str_format_internal.a
+[152/387] Linking CXX static library _deps/abseil-cpp-build/absl/crc/libabsl_crc32c.a
+[153/387] Linking CXX static library _deps/abseil-cpp-build/absl/crc/libabsl_crc_cord_state.a
+[154/387] Linking CXX static library _deps/abseil-cpp-build/absl/flags/libabsl_flags_marshalling.a
+[155/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/cord_internal.dir/internal/cord_rep_crc.cc.o
+[156/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/cordz_functions.dir/internal/cordz_functions.cc.o
+[157/387] Linking CXX static library _deps/abseil-cpp-build/absl/strings/libabsl_cordz_functions.a
+[158/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/cord_internal.dir/internal/cord_rep_consume.cc.o
+[159/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/cord.dir/cord_analysis.cc.o
+[160/387] Building CXX object _deps/abseil-cpp-build/absl/synchronization/CMakeFiles/graphcycles_internal.dir/internal/graphcycles.cc.o
+[161/387] Linking CXX static library _deps/abseil-cpp-build/absl/synchronization/libabsl_graphcycles_internal.a
+[162/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/cordz_handle.dir/internal/cordz_handle.cc.o
+[163/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/cordz_info.dir/internal/cordz_info.cc.o
+[164/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/cord_internal.dir/internal/cord_rep_btree.cc.o
+[165/387] Linking CXX static library _deps/abseil-cpp-build/absl/strings/libabsl_cord_internal.a
+[166/387] Building CXX object _deps/abseil-cpp-build/absl/synchronization/CMakeFiles/synchronization.dir/barrier.cc.o
+[167/387] Building CXX object _deps/abseil-cpp-build/absl/synchronization/CMakeFiles/synchronization.dir/internal/create_thread_identity.cc.o
+[168/387] Building CXX object _deps/abseil-cpp-build/absl/synchronization/CMakeFiles/kernel_timeout_internal.dir/internal/kernel_timeout.cc.o
+[169/387] Building CXX object _deps/abseil-cpp-build/absl/synchronization/CMakeFiles/synchronization.dir/internal/futex_waiter.cc.o
+[170/387] Building CXX object _deps/abseil-cpp-build/absl/synchronization/CMakeFiles/synchronization.dir/internal/per_thread_sem.cc.o
+[171/387] Building CXX object _deps/abseil-cpp-build/absl/synchronization/CMakeFiles/synchronization.dir/blocking_counter.cc.o
+[172/387] Building CXX object _deps/abseil-cpp-build/absl/synchronization/CMakeFiles/synchronization.dir/internal/win32_waiter.cc.o
+[173/387] Building CXX object _deps/abseil-cpp-build/absl/synchronization/CMakeFiles/synchronization.dir/internal/pthread_waiter.cc.o
+[174/387] Building CXX object _deps/abseil-cpp-build/absl/synchronization/CMakeFiles/synchronization.dir/internal/stdcpp_waiter.cc.o
+[175/387] Building CXX object _deps/abseil-cpp-build/absl/synchronization/CMakeFiles/synchronization.dir/internal/sem_waiter.cc.o
+[176/387] Building CXX object _deps/abseil-cpp-build/absl/strings/CMakeFiles/cord.dir/cord.cc.o
+[177/387] Building CXX object _deps/abseil-cpp-build/absl/synchronization/CMakeFiles/synchronization.dir/notification.cc.o
+[178/387] Building CXX object _deps/abseil-cpp-build/absl/synchronization/CMakeFiles/synchronization.dir/internal/waiter_base.cc.o
+[179/387] Building CXX object _deps/abseil-cpp-build/absl/time/CMakeFiles/time.dir/clock.cc.o
+[180/387] Building CXX object _deps/abseil-cpp-build/absl/time/CMakeFiles/time.dir/time.cc.o
+[181/387] Building CXX object _deps/abseil-cpp-build/absl/time/CMakeFiles/time.dir/civil_time.cc.o
+[182/387] Building CXX object _deps/abseil-cpp-build/absl/synchronization/CMakeFiles/synchronization.dir/mutex.cc.o
+[183/387] Building CXX object _deps/abseil-cpp-build/absl/time/CMakeFiles/time_zone.dir/internal/cctz/src/time_zone_fixed.cc.o
+[184/387] Building CXX object _deps/abseil-cpp-build/absl/time/CMakeFiles/time.dir/format.cc.o
+[185/387] Building CXX object _deps/abseil-cpp-build/absl/time/CMakeFiles/time_zone.dir/internal/cctz/src/time_zone_if.cc.o
+[186/387] Building CXX object _deps/abseil-cpp-build/absl/time/CMakeFiles/civil_time.dir/internal/cctz/src/civil_time_detail.cc.o
+[187/387] Linking CXX static library _deps/abseil-cpp-build/absl/time/libabsl_civil_time.a
+[188/387] Building CXX object _deps/abseil-cpp-build/absl/time/CMakeFiles/time.dir/duration.cc.o
+[189/387] Building CXX object _deps/abseil-cpp-build/absl/time/CMakeFiles/time_zone.dir/internal/cctz/src/time_zone_impl.cc.o
+[190/387] Building CXX object _deps/abseil-cpp-build/absl/time/CMakeFiles/time_zone.dir/internal/cctz/src/time_zone_posix.cc.o
+[191/387] Building CXX object _deps/abseil-cpp-build/absl/time/CMakeFiles/time_zone.dir/internal/cctz/src/time_zone_format.cc.o
+[192/387] Building CXX object _deps/abseil-cpp-build/absl/time/CMakeFiles/time_zone.dir/internal/cctz/src/time_zone_libc.cc.o
+[193/387] Building CXX object _deps/abseil-cpp-build/absl/time/CMakeFiles/time_zone.dir/internal/cctz/src/time_zone_lookup.cc.o
+[194/387] Building CXX object _deps/abseil-cpp-build/absl/time/CMakeFiles/time_zone.dir/internal/cctz/src/zone_info_source.cc.o
+[195/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/bitmap256.cc.o
+[196/387] Building CXX object _deps/abseil-cpp-build/absl/time/CMakeFiles/time_zone.dir/internal/cctz/src/time_zone_info.cc.o
+[197/387] Linking CXX static library _deps/abseil-cpp-build/absl/time/libabsl_time_zone.a
+[198/387] Linking CXX static library _deps/abseil-cpp-build/absl/time/libabsl_time.a
+[199/387] Linking CXX static library _deps/abseil-cpp-build/absl/log/libabsl_log_internal_globals.a
+[200/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/bitstate.cc.o
+[201/387] Linking CXX static library _deps/abseil-cpp-build/absl/log/libabsl_log_internal_format.a
+[202/387] Linking CXX static library _deps/abseil-cpp-build/absl/log/libabsl_log_sink.a
+[203/387] Linking CXX static library _deps/abseil-cpp-build/absl/synchronization/libabsl_kernel_timeout_internal.a
+[204/387] Linking CXX static library _deps/abseil-cpp-build/absl/synchronization/libabsl_synchronization.a
+[205/387] Linking CXX static library _deps/abseil-cpp-build/absl/container/libabsl_hashtablez_sampler.a
+[206/387] Linking CXX static library _deps/abseil-cpp-build/absl/flags/libabsl_flags_program_name.a
+[207/387] Linking CXX static library _deps/abseil-cpp-build/absl/flags/libabsl_flags_config.a
+[208/387] Linking CXX static library _deps/abseil-cpp-build/absl/flags/libabsl_flags_internal.a
+[209/387] Linking CXX static library _deps/abseil-cpp-build/absl/log/libabsl_vlog_config_internal.a
+[210/387] Linking CXX static library _deps/abseil-cpp-build/absl/log/libabsl_log_globals.a
+[211/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/mimics_pcre.cc.o
+[212/387] Linking CXX static library _deps/abseil-cpp-build/absl/random/libabsl_random_internal_entropy_pool.a
+[213/387] Linking CXX static library _deps/abseil-cpp-build/absl/log/libabsl_log_internal_log_sink_set.a
+[214/387] Linking CXX static library _deps/abseil-cpp-build/absl/random/libabsl_random_seed_sequences.a
+[215/387] Linking CXX static library _deps/abseil-cpp-build/absl/log/libabsl_log_internal_message.a
+[216/387] Linking CXX static library _deps/abseil-cpp-build/absl/log/libabsl_log_internal_check_op.a
+[217/387] Linking CXX static library _deps/abseil-cpp-build/absl/strings/libabsl_cordz_handle.a
+[218/387] Linking CXX static library _deps/abseil-cpp-build/absl/strings/libabsl_cordz_info.a
+[219/387] Linking CXX static library _deps/abseil-cpp-build/absl/strings/libabsl_cord.a
+[220/387] Linking CXX static library _deps/abseil-cpp-build/absl/container/libabsl_raw_hash_set.a
+[221/387] Linking CXX static library _deps/abseil-cpp-build/absl/flags/libabsl_flags_reflection.a
+[222/387] Linking CXX static library _deps/abseil-cpp-build/absl/flags/libabsl_flags_usage_internal.a
+[223/387] Linking CXX static library _deps/abseil-cpp-build/absl/flags/libabsl_flags_usage.a
+[224/387] Linking CXX static library _deps/abseil-cpp-build/absl/flags/libabsl_flags_parse.a
+[225/387] Linking CXX static library _deps/abseil-cpp-build/absl/status/libabsl_status.a
+[226/387] Linking CXX static library _deps/abseil-cpp-build/absl/status/libabsl_statusor.a
+[227/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/filtered_re2.cc.o
+[228/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/perl_groups.cc.o
+[229/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/onepass.cc.o
+[230/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/compile.cc.o
+[231/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/nfa.cc.o
+[232/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/dfa.cc.o
+[233/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/parse.cc.o
+[234/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/prefilter_tree.cc.o
+[235/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/prog.cc.o
+[236/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/prefilter.cc.o
+[237/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/unicode_casefold.cc.o
+[238/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/unicode_groups.cc.o
+[239/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/util/rune.cc.o
+[240/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/util/strutil.cc.o
+[241/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/re2.cc.o
+[242/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/regexp.cc.o
+[243/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/set.cc.o
+[244/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/tostring.cc.o
+[245/387] Building CXX object _deps/re2-build/CMakeFiles/re2.dir/re2/simplify.cc.o
+[246/387] Linking CXX static library _deps/re2-build/libre2.a
+[247/387] Building CXX object test/fuzztest/common/CMakeFiles/fuzztest_hash.dir/hash.cc.o
+[248/387] Building CXX object test/fuzztest/common/CMakeFiles/fuzztest_bazel.dir/bazel.cc.o
+[249/387] Linking CXX static library test/fuzztest/common/libfuzztest_bazel.a
+[250/387] Building CXX object test/fuzztest/common/CMakeFiles/fuzztest_blob_file.dir/blob_file.cc.o
+[251/387] Building CXX object test/fuzztest/common/CMakeFiles/fuzztest_sha1.dir/sha1.cc.o
+[252/387] Linking CXX static library test/fuzztest/common/libfuzztest_sha1.a
+[253/387] Linking CXX static library test/fuzztest/common/libfuzztest_hash.a
+[254/387] Building CXX object test/fuzztest/common/CMakeFiles/fuzztest_remote_file.dir/remote_file.cc.o
+[255/387] Building CXX object test/fuzztest/common/CMakeFiles/fuzztest_remote_file.dir/remote_file_oss.cc.o
+[256/387] Linking CXX static library test/fuzztest/common/libfuzztest_remote_file.a
+[257/387] Linking CXX static library test/fuzztest/common/libfuzztest_blob_file.a
+[258/387] Building CXX object test/fuzztest/fuzztest/CMakeFiles/fuzztest_fuzzing_bit_gen.dir/fuzzing_bit_gen.cc.o
+[259/387] Building CXX object test/fuzztest/fuzztest/CMakeFiles/fuzztest_fuzztest_gtest_main.dir/fuzztest_gtest_main.cc.o
+[260/387] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_corpus_database.dir/corpus_database.cc.o
+[261/387] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_configuration.dir/configuration.cc.o
+[262/387] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_configuration.a
+[263/387] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_coverage.dir/coverage.cc.o
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/internal/coverage.cc:386:5: warning: ‘always_inline’ function might not be inlinable [-Wattributes]
+  386 |     TraceCmp(uint64_t arg1, uint64_t arg2, uint8_t argsize_bit,
+      |     ^~~~~~~~
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/internal/coverage.cc:386:5: warning: ‘always_inline’ function might not be inlinable [-Wattributes]
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/internal/coverage.cc:386:5: warning: ‘always_inline’ function might not be inlinable [-Wattributes]
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/internal/coverage.cc:386:5: warning: ‘always_inline’ function might not be inlinable [-Wattributes]
+[264/387] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_fixture_driver.dir/fixture_driver.cc.o
+In file included from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/domain_core.h:61,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registration.h:32,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/fixture_driver.h:38,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/internal/fixture_driver.cc:15:
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: warning: friend declaration ‘auto fuzztest::internal_no_adl::Utf8String()’ declares a non-template function [-Wnon-template-friend]
+  190 |   friend auto internal_no_adl::Utf8String();
+      |                                           ^
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: note: (if this is not what you intended, make sure the function template has already been declared and add ‘<>’ after the function name here)
+[265/387] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_io.dir/io.cc.o
+[266/387] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_logging.dir/logging.cc.o
+[267/387] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_logging.a
+[268/387] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_io.a
+[269/387] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_corpus_database.a
+[270/387] Building CXX object test/fuzztest/fuzztest/CMakeFiles/fuzztest_fuzztest_macros.dir/fuzztest_macros.cc.o
+In file included from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/domain_core.h:61,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registration.h:32,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/fuzztest_macros.h:27,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/fuzztest_macros.cc:15:
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: warning: friend declaration ‘auto fuzztest::internal_no_adl::Utf8String()’ declares a non-template function [-Wnon-template-friend]
+  190 |   friend auto internal_no_adl::Utf8String();
+      |                                           ^
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: note: (if this is not what you intended, make sure the function template has already been declared and add ‘<>’ after the function name here)
+[271/387] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_register_fuzzing_mocks.dir/register_fuzzing_mocks.cc.o
+[272/387] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_register_fuzzing_mocks.a
+[273/387] Linking CXX static library test/fuzztest/fuzztest/libfuzztest_fuzzing_bit_gen.a
+[274/387] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_googletest_adaptor.dir/googletest_adaptor.cc.o
+In file included from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/domain_core.h:61,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registration.h:32,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/fixture_driver.h:38,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registry.h:30,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/googletest_adaptor.h:26,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/internal/googletest_adaptor.cc:2:
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: warning: friend declaration ‘auto fuzztest::internal_no_adl::Utf8String()’ declares a non-template function [-Wnon-template-friend]
+  190 |   friend auto internal_no_adl::Utf8String();
+      |                                           ^
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: note: (if this is not what you intended, make sure the function template has already been declared and add ‘<>’ after the function name here)
+[275/387] Building CXX object test/fuzztest/fuzztest/CMakeFiles/fuzztest_init_fuzztest.dir/init_fuzztest.cc.o
+In file included from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/domain_core.h:61,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registration.h:32,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/fixture_driver.h:38,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registry.h:30,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/googletest_adaptor.h:26,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/init_fuzztest.cc:35:
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: warning: friend declaration ‘auto fuzztest::internal_no_adl::Utf8String()’ declares a non-template function [-Wnon-template-friend]
+  190 |   friend auto internal_no_adl::Utf8String();
+      |                                           ^
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: note: (if this is not what you intended, make sure the function template has already been declared and add ‘<>’ after the function name here)
+[276/387] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_serialization.dir/serialization.cc.o
+[277/387] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_seed_seq.dir/seed_seq.cc.o
+[278/387] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_seed_seq.a
+[279/387] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_serialization.a
+[280/387] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_compatibility_mode.dir/compatibility_mode.cc.o
+In file included from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/domain_core.h:61,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registration.h:32,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/fixture_driver.h:38,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/compatibility_mode.h:40,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/internal/compatibility_mode.cc:15:
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: warning: friend declaration ‘auto fuzztest::internal_no_adl::Utf8String()’ declares a non-template function [-Wnon-template-friend]
+  190 |   friend auto internal_no_adl::Utf8String();
+      |                                           ^
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: note: (if this is not what you intended, make sure the function template has already been declared and add ‘<>’ after the function name here)
+[281/387] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_type_support.dir/type_support.cc.o
+[282/387] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_type_support.a
+[283/387] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_status.dir/status.cc.o
+[284/387] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_registry.dir/registry.cc.o
+In file included from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/domain_core.h:61,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registration.h:32,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/fixture_driver.h:38,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registry.h:30,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/internal/registry.cc:15:
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: warning: friend declaration ‘auto fuzztest::internal_no_adl::Utf8String()’ declares a non-template function [-Wnon-template-friend]
+  190 |   friend auto internal_no_adl::Utf8String();
+      |                                           ^
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: note: (if this is not what you intended, make sure the function template has already been declared and add ‘<>’ after the function name here)
+[285/387] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_status.a
+[286/387] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_coverage.a
+[287/387] Building CXX object test/fuzztest/fuzztest/internal/domains/CMakeFiles/fuzztest_utf.dir/rune.cc.o
+[288/387] Building CXX object test/fuzztest/fuzztest/internal/domains/CMakeFiles/fuzztest_in_grammar_impl.dir/in_grammar_impl.cc.o
+[289/387] Building CXX object test/fuzztest/fuzztest/internal/domains/CMakeFiles/fuzztest_utf.dir/utf.cc.o
+[290/387] Linking CXX static library test/fuzztest/fuzztest/internal/domains/libfuzztest_utf.a
+[291/387] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_fixture_driver.a
+[292/387] Generating Flight Tasks
+[293/387] Building CXX object boards/px4/sitl/src/CMakeFiles/drivers_board.dir/board_shutdown.cpp.o
+[294/387] Building C object boards/px4/sitl/src/CMakeFiles/drivers_board.dir/sitl_led.c.o
+[295/387] Linking CXX static library boards/px4/sitl/src/libdrivers_board.a
+[296/387] Generating combined event json file
+[297/387] Generating uORB topic headers
+[298/387] Generating px4 event header file
+[299/387] Building CXX object src/lib/perf/CMakeFiles/perf.dir/perf_counter.cpp.o
+[300/387] Linking CXX static library src/lib/perf/libperf.a
+[301/387] Building CXX object src/lib/tinybson/CMakeFiles/tinybson.dir/tinybson.cpp.o
+[302/387] Linking CXX static library src/lib/tinybson/libtinybson.a
+[303/387] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/dq_addlast.c.o
+[304/387] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/dq_rem.c.o
+[305/387] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/dq_remfirst.c.o
+[306/387] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/hrt_queue.c.o
+[307/387] Generating serial_params.c
+[308/387] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/hrt_work_cancel.c.o
+[309/387] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/hrt_thread.c.o
+[310/387] Building CXX object test/fuzztest/fuzztest/internal/domains/CMakeFiles/fuzztest_in_regexp_impl.dir/in_regexp_impl.cc.o
+[311/387] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/sq_addafter.c.o
+[312/387] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/queue.c.o
+[313/387] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/sq_addlast.c.o
+[314/387] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/sq_remfirst.c.o
+[315/387] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/work_cancel.c.o
+[316/387] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/work_lock.c.o
+[317/387] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/work_queue.c.o
+[318/387] Building C object platforms/common/work_queue/CMakeFiles/work_queue.dir/work_thread.c.o
+[319/387] Linking C static library platforms/common/work_queue/libwork_queue.a
+[320/387] Building CXX object test/fuzztest/fuzztest/internal/domains/CMakeFiles/fuzztest_regexp_dfa.dir/regexp_dfa.cc.o
+[321/387] Linking CXX static library test/fuzztest/fuzztest/internal/domains/libfuzztest_regexp_dfa.a
+[322/387] Linking CXX static library test/fuzztest/fuzztest/internal/domains/libfuzztest_in_regexp_impl.a
+[323/387] Linking CXX static library test/fuzztest/fuzztest/internal/domains/libfuzztest_in_grammar_impl.a
+[324/387] Generating parameters.xml
+[325/387] Generating px4_parameters.hpp
+[326/387] Building CXX object src/lib/hysteresis/CMakeFiles/hysteresis.dir/hysteresis.cpp.o
+[327/387] Building CXX object src/lib/pid/CMakeFiles/PID.dir/PID.cpp.o
+[328/387] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/px4_posix_impl.cpp.o
+[329/387] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/px4_sem.cpp.o
+[330/387] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/px4_init.cpp.o
+[331/387] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/tasks.cpp.o
+[332/387] Building C object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/lib_crc32.c.o
+[333/387] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/drv_hrt.cpp.o
+[334/387] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/cpuload.cpp.o
+[335/387] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/print_load.cpp.o
+[336/387] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/__/__/__/__/common/Serial.cpp.o
+[337/387] Building CXX object platforms/posix/src/px4/common/CMakeFiles/px4_layer.dir/SerialImpl.cpp.o
+[338/387] Building CXX object platforms/posix/src/px4/common/px4_daemon/CMakeFiles/px4_daemon.dir/history.cpp.o
+[339/387] Building CXX object platforms/posix/src/px4/common/px4_daemon/CMakeFiles/px4_daemon.dir/pxh.cpp.o
+[340/387] Building CXX object platforms/posix/src/px4/common/px4_daemon/CMakeFiles/px4_daemon.dir/client.cpp.o
+[341/387] Building CXX object platforms/posix/src/px4/common/px4_daemon/CMakeFiles/px4_daemon.dir/server_io.cpp.o
+[342/387] Building CXX object platforms/posix/src/px4/common/px4_daemon/CMakeFiles/px4_daemon.dir/server.cpp.o
+[343/387] Building C object platforms/common/CMakeFiles/px4_platform.dir/board_common.c.o
+[344/387] Building CXX object platforms/posix/src/px4/common/px4_daemon/CMakeFiles/px4_daemon.dir/sock_protocol.cpp.o
+[345/387] Building C object platforms/common/CMakeFiles/px4_platform.dir/board_identity.c.o
+[346/387] Building CXX object src/lib/pid/CMakeFiles/unit-PID.dir/PIDTest.cpp.o
+[347/387] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/external_reset_lockout.cpp.o
+[348/387] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/i2c.cpp.o
+[349/387] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/module.cpp.o
+[350/387] Building C object platforms/common/CMakeFiles/px4_platform.dir/px4_getopt.c.o
+[351/387] Building CXX object src/lib/hysteresis/CMakeFiles/unit-Hysteresis.dir/HysteresisTest.cpp.o
+[352/387] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/i2c_spi_buses.cpp.o
+[353/387] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/px4_cli.cpp.o
+[354/387] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/spi.cpp.o
+[355/387] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/shutdown.cpp.o
+[356/387] Building C object platforms/common/CMakeFiles/px4_platform.dir/pab_manifest.c.o
+[357/387] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/Serial.cpp.o
+[358/387] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/px4_log_history.cpp.o
+[359/387] Building CXX object platforms/common/CMakeFiles/px4_platform.dir/px4_log.cpp.o
+[360/387] Building CXX object platforms/common/px4_work_queue/CMakeFiles/px4_work_queue.dir/WorkItem.cpp.o
+[361/387] Building CXX object platforms/common/px4_work_queue/CMakeFiles/px4_work_queue.dir/ScheduledWorkItem.cpp.o
+[362/387] Building CXX object platforms/common/px4_work_queue/CMakeFiles/px4_work_queue.dir/WorkQueue.cpp.o
+[363/387] Building CXX object platforms/common/px4_work_queue/CMakeFiles/px4_work_queue.dir/WorkItemSingleShot.cpp.o
+[364/387] Building CXX object src/lib/parameters/CMakeFiles/parameters.dir/atomic_transaction.cpp.o
+[365/387] Building CXX object src/lib/parameters/CMakeFiles/parameters.dir/param_translation_unit_tests.cpp.o
+[366/387] Building CXX object platforms/common/px4_work_queue/CMakeFiles/px4_work_queue.dir/WorkQueueManager.cpp.o
+[367/387] Building CXX object src/lib/parameters/CMakeFiles/parameters.dir/autosave.cpp.o
+[368/387] Building CXX object src/lib/parameters/CMakeFiles/parameters.dir/parameters.cpp.o
+[369/387] Linking CXX static library src/lib/parameters/libparameters.a
+[370/387] Linking CXX static library platforms/common/px4_work_queue/libpx4_work_queue.a
+[371/387] Linking CXX static library platforms/common/libpx4_platform.a
+[372/387] Linking CXX static library platforms/posix/src/px4/common/px4_daemon/libpx4_daemon.a
+[373/387] Linking CXX static library platforms/posix/src/px4/common/libpx4_layer.a
+[374/387] Linking CXX static library src/lib/hysteresis/libhysteresis.a
+[375/387] Linking CXX static library src/lib/pid/libPID.a
+[376/387] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[377/387] Linking CXX static library lib/libgtest.a
+[378/387] Building CXX object test/fuzztest/fuzztest/internal/CMakeFiles/fuzztest_runtime.dir/runtime.cc.o
+In file included from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/domain_core.h:61,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/registration.h:32,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/fixture_driver.h:38,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/runtime.h:46,
+                 from /home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/fuzztest/internal/runtime.cc:15:
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: warning: friend declaration ‘auto fuzztest::internal_no_adl::Utf8String()’ declares a non-template function [-Wnon-template-friend]
+  190 |   friend auto internal_no_adl::Utf8String();
+      |                                           ^
+/home/zexr/Desktop/sqe_A2/PX4-Autopilot/test/fuzztest/./fuzztest/internal/domains/overlap_of_impl.h:190:43: note: (if this is not what you intended, make sure the function template has already been declared and add ‘<>’ after the function name here)
+[379/387] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_runtime.a
+[380/387] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_compatibility_mode.a
+[381/387] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_registry.a
+[382/387] Linking CXX static library test/fuzztest/fuzztest/internal/libfuzztest_googletest_adaptor.a
+[383/387] Linking CXX static library test/fuzztest/fuzztest/libfuzztest_fuzztest_macros.a
+[384/387] Linking CXX static library test/fuzztest/fuzztest/libfuzztest_init_fuzztest.a
+[385/387] Linking CXX static library test/fuzztest/fuzztest/libfuzztest_fuzztest_gtest_main.a
+[386/387] Linking CXX executable unit-Hysteresis
+[387/387] Linking CXX executable unit-PID

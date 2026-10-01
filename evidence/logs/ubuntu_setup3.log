@@ -1,0 +1,21 @@
+[ubuntu.sh] Starting...
+[ubuntu.sh] arch: x86_64
+[ubuntu.sh] Ubuntu 24.04
+[ubuntu.sh] Installing PX4 general dependencies
+Hit:1 https://deb.nodesource.com/node_22.x nodistro InRelease
+Hit:2 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease
+Ign:4 http://packages.linuxmint.com zena InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:6 https://packages.microsoft.com/repos/code stable InRelease
+Get:7 http://packages.linuxmint.com zena Release [27.6 kB]
+Hit:8 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:9 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:10 https://downloads.claude.ai/claude-desktop/apt/stable stable InRelease
+Hit:11 https://dl.google.com/linux/chrome-stable/deb stable InRelease
+Hit:12 https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev antigravity-debian InRelease
+Get:13 http://packages.linuxmint.com zena Release.gpg [833 B]
+Get:14 http://packages.linuxmint.com zena/upstream amd64 Packages [50.4 kB]
+Fetched 78.9 kB in 2s (36.7 kB/s)
+Reading package lists...
+E: dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to correct the problem. 

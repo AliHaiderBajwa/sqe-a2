@@ -1,0 +1,21 @@
+diff --git a/src/lib/battery/CMakeLists.txt b/src/lib/battery/CMakeLists.txt
+index 684fe2e8ff..3e7195c864 100644
+--- a/src/lib/battery/CMakeLists.txt
++++ b/src/lib/battery/CMakeLists.txt
+@@ -33,5 +33,7 @@
+ 
+ px4_add_library(battery battery.cpp)
+ 
++px4_add_functional_gtest(SRC BatteryStructuralTest.cpp LINKLIBS battery)
++
+ # TODO: Add an option in px4_add_library function to add module config file
+ set_property(GLOBAL APPEND PROPERTY PX4_MODULE_CONFIG_FILES ${CMAKE_CURRENT_SOURCE_DIR}/module.yaml)
+diff --git a/src/lib/hysteresis/CMakeLists.txt b/src/lib/hysteresis/CMakeLists.txt
+index bd71aa5ef6..cdbdf38a1b 100644
+--- a/src/lib/hysteresis/CMakeLists.txt
++++ b/src/lib/hysteresis/CMakeLists.txt
+@@ -34,3 +34,4 @@
+ px4_add_library(hysteresis hysteresis.cpp)
+ 
+ px4_add_unit_gtest(SRC HysteresisTest.cpp LINKLIBS hysteresis)
++px4_add_unit_gtest(SRC HysteresisStructuralTest.cpp LINKLIBS hysteresis)

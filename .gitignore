@@ -1,0 +1,6 @@
+# PX4-Autopilot baseline clone (3.7 GB incl. build artifacts) is intentionally
+# NOT versioned. It is reproducible from the pinned tag + patch:
+#   git clone --branch v1.17.0 --recursive https://github.com/PX4/PX4-Autopilot.git
+#   git apply submission_pkg/../patch/full_reconstruction.patch
+# (see submission_pkg/RUN_INSTRUCTIONS.md and patch/ for details)
+PX4-Autopilot/
