@@ -6,6 +6,9 @@
 - Ashar delivered branch `ashar-pid-work` (17 tests + ASHAR_HANDOFF.md, Windows-authored, unexecuted). First Linux run: 12/17 — refuted his D-term minus-sign claim (v1.17.0 L47 is PLUS; his −4/−100 → +4/+100) and his 4-condition anti-windup gate claim (no such gate in L57-64; 3 saturation tests rewritten to accumulate-and-clamp + renamed). Header/comments corrected to real line numbers; his delivery preserved in `ashar/` for provenance. Coverage re-measured (PID 22/22, 10/10), inventory 51→57 rows, workbook/DOCX/patch/package regenerated, branch merged to main.
 - Remaining external: Taimoor workbook verification + viva bank (fallback already ships).
 
+## 2026-10-02 — Report rewritten in full prose + professional DOCX
+- `REPORT_DRAFT.md` rewritten from bullet phrases to complete sentences throughout (§§1–8, 10–12; §9 judgment kept verbatim at 324 words), reconciled line-by-line against the brief's report requirements (hash traceability, env block, scope record, no-duplication rule, gap-investigation standard, defect format, judgment scope); DOCX rebuilt with title page, page numbers, and styled headings into both packages.
+
 ## 2026-10-02 — `deliverables/` assembled from re-read checklist (8 items + README)
 - Re-read brief Submission Checklist (p.5); built upload-only folder (1.5M): prefixed DOCX/xlsx/patch, 3 test files (build paths preserved), RUN_INSTRUCTIONS, AI log, baseline+final `.info`, HTML, 5 run logs, README cross-reference with naming-exception justifications. All files diff-verified identical to sources; workbook re-validated on load.
 
