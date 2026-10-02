@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PX4 v1.17.0 scope coverage (final) - battery/battery.h</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">battery</a> - battery.h<span style="font-size: 80%;"> (source / <a href="battery.h.func-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only">Hit</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PX4 v1.17.0 scope coverage (final)</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">5</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test Date:</td>
+            <td class="headerValue">2026-10-02 01:13:56</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryMed">83.3&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">5</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">50.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+                  <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading">             Branch data     Line data    Source code</pre>
+<pre class="source">
+<span id="L1"><span class="lineNum">       1</span>                 :             : /****************************************************************************</span>
+<span id="L2"><span class="lineNum">       2</span>                 :             :  *</span>
+<span id="L3"><span class="lineNum">       3</span>                 :             :  *   Copyright (c) 2019-2021 PX4 Development Team. All rights reserved.</span>
+<span id="L4"><span class="lineNum">       4</span>                 :             :  *</span>
+<span id="L5"><span class="lineNum">       5</span>                 :             :  * Redistribution and use in source and binary forms, with or without</span>
+<span id="L6"><span class="lineNum">       6</span>                 :             :  * modification, are permitted provided that the following conditions</span>
+<span id="L7"><span class="lineNum">       7</span>                 :             :  * are met:</span>
+<span id="L8"><span class="lineNum">       8</span>                 :             :  *</span>
+<span id="L9"><span class="lineNum">       9</span>                 :             :  * 1. Redistributions of source code must retain the above copyright</span>
+<span id="L10"><span class="lineNum">      10</span>                 :             :  *    notice, this list of conditions and the following disclaimer.</span>
+<span id="L11"><span class="lineNum">      11</span>                 :             :  * 2. Redistributions in binary form must reproduce the above copyright</span>
+<span id="L12"><span class="lineNum">      12</span>                 :             :  *    notice, this list of conditions and the following disclaimer in</span>
+<span id="L13"><span class="lineNum">      13</span>                 :             :  *    the documentation and/or other materials provided with the</span>
+<span id="L14"><span class="lineNum">      14</span>                 :             :  *    distribution.</span>
+<span id="L15"><span class="lineNum">      15</span>                 :             :  * 3. Neither the name PX4 nor the names of its contributors may be</span>
+<span id="L16"><span class="lineNum">      16</span>                 :             :  *    used to endorse or promote products derived from this software</span>
+<span id="L17"><span class="lineNum">      17</span>                 :             :  *    without specific prior written permission.</span>
+<span id="L18"><span class="lineNum">      18</span>                 :             :  *</span>
+<span id="L19"><span class="lineNum">      19</span>                 :             :  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span>
+<span id="L20"><span class="lineNum">      20</span>                 :             :  * &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span>
+<span id="L21"><span class="lineNum">      21</span>                 :             :  * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span>
+<span id="L22"><span class="lineNum">      22</span>                 :             :  * FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span>
+<span id="L23"><span class="lineNum">      23</span>                 :             :  * COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span>
+<span id="L24"><span class="lineNum">      24</span>                 :             :  * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span>
+<span id="L25"><span class="lineNum">      25</span>                 :             :  * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS</span>
+<span id="L26"><span class="lineNum">      26</span>                 :             :  * OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED</span>
+<span id="L27"><span class="lineNum">      27</span>                 :             :  * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span>
+<span id="L28"><span class="lineNum">      28</span>                 :             :  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span>
+<span id="L29"><span class="lineNum">      29</span>                 :             :  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span>
+<span id="L30"><span class="lineNum">      30</span>                 :             :  * POSSIBILITY OF SUCH DAMAGE.</span>
+<span id="L31"><span class="lineNum">      31</span>                 :             :  *</span>
+<span id="L32"><span class="lineNum">      32</span>                 :             :  ****************************************************************************/</span>
+<span id="L33"><span class="lineNum">      33</span>                 :             : </span>
+<span id="L34"><span class="lineNum">      34</span>                 :             : /**</span>
+<span id="L35"><span class="lineNum">      35</span>                 :             :  * @file battery.h</span>
+<span id="L36"><span class="lineNum">      36</span>                 :             :  *</span>
+<span id="L37"><span class="lineNum">      37</span>                 :             :  * Library calls for battery functionality.</span>
+<span id="L38"><span class="lineNum">      38</span>                 :             :  *</span>
+<span id="L39"><span class="lineNum">      39</span>                 :             :  * @author Julian Oes &lt;julian@oes.ch&gt;</span>
+<span id="L40"><span class="lineNum">      40</span>                 :             :  * @author Timothy Scott &lt;timothy@auterion.com&gt;</span>
+<span id="L41"><span class="lineNum">      41</span>                 :             :  */</span>
+<span id="L42"><span class="lineNum">      42</span>                 :             : </span>
+<span id="L43"><span class="lineNum">      43</span>                 :             : #pragma once</span>
+<span id="L44"><span class="lineNum">      44</span>                 :             : </span>
+<span id="L45"><span class="lineNum">      45</span>                 :             : #include &lt;math.h&gt;</span>
+<span id="L46"><span class="lineNum">      46</span>                 :             : #include &lt;float.h&gt;</span>
+<span id="L47"><span class="lineNum">      47</span>                 :             : </span>
+<span id="L48"><span class="lineNum">      48</span>                 :             : #include &lt;board_config.h&gt;</span>
+<span id="L49"><span class="lineNum">      49</span>                 :             : #include &lt;px4_platform_common/board_common.h&gt;</span>
+<span id="L50"><span class="lineNum">      50</span>                 :             : #include &lt;px4_platform_common/module_params.h&gt;</span>
+<span id="L51"><span class="lineNum">      51</span>                 :             : #include &lt;matrix/math.hpp&gt;</span>
+<span id="L52"><span class="lineNum">      52</span>                 :             : </span>
+<span id="L53"><span class="lineNum">      53</span>                 :             : #include &lt;drivers/drv_hrt.h&gt;</span>
+<span id="L54"><span class="lineNum">      54</span>                 :             : #include &lt;lib/parameters/param.h&gt;</span>
+<span id="L55"><span class="lineNum">      55</span>                 :             : #include &lt;lib/mathlib/math/filter/AlphaFilter.hpp&gt;</span>
+<span id="L56"><span class="lineNum">      56</span>                 :             : #include &lt;uORB/PublicationMulti.hpp&gt;</span>
+<span id="L57"><span class="lineNum">      57</span>                 :             : #include &lt;uORB/Subscription.hpp&gt;</span>
+<span id="L58"><span class="lineNum">      58</span>                 :             : #include &lt;uORB/topics/battery_status.h&gt;</span>
+<span id="L59"><span class="lineNum">      59</span>                 :             : #include &lt;uORB/topics/flight_phase_estimation.h&gt;</span>
+<span id="L60"><span class="lineNum">      60</span>                 :             : #include &lt;uORB/topics/vehicle_status.h&gt;</span>
+<span id="L61"><span class="lineNum">      61</span>                 :             : </span>
+<span id="L62"><span class="lineNum">      62</span>                 :             : /**</span>
+<span id="L63"><span class="lineNum">      63</span>                 :             :  * BatteryBase is a base class for any type of battery.</span>
+<span id="L64"><span class="lineNum">      64</span>                 :             :  *</span>
+<span id="L65"><span class="lineNum">      65</span>                 :             :  * You can use this class on its own. Or, if you need to implement a custom battery type,</span>
+<span id="L66"><span class="lineNum">      66</span>                 :             :  * you can inherit from this class. See, for example, src/modules/battery_status/AnalogBattery.h</span>
+<span id="L67"><span class="lineNum">      67</span>                 :             :  */</span>
+<span id="L68"><span class="lineNum">      68</span>                 :             : class Battery : public ModuleParams</span>
+<span id="L69"><span class="lineNum">      69</span>                 :             : {</span>
+<span id="L70"><span class="lineNum">      70</span>                 :             : public:</span>
+<span id="L71"><span class="lineNum">      71</span>                 :             :         Battery(int index, ModuleParams *parent, const int sample_interval_us, const uint8_t source);</span>
+<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC tlaBgGNC">          87 :         ~Battery() = default;</span></span>
+<span id="L73"><span class="lineNum">      73</span>                 :             : </span>
+<span id="L74"><span class="lineNum">      74</span>                 :             :         /**</span>
+<span id="L75"><span class="lineNum">      75</span>                 :             :          * Get the battery cell count</span>
+<span id="L76"><span class="lineNum">      76</span>                 :             :          */</span>
+<span id="L77"><span class="lineNum">      77</span>                 :             :         int cell_count() { return _params.n_cells; }</span>
+<span id="L78"><span class="lineNum">      78</span>                 :             : </span>
+<span id="L79"><span class="lineNum">      79</span>                 :             :         /**</span>
+<span id="L80"><span class="lineNum">      80</span>                 :             :          * Get the empty voltage per cell</span>
+<span id="L81"><span class="lineNum">      81</span>                 :             :          */</span>
+<span id="L82"><span class="lineNum">      82</span>                 :             :         float empty_cell_voltage() { return _params.v_empty; }</span>
+<span id="L83"><span class="lineNum">      83</span>                 :             : </span>
+<span id="L84"><span class="lineNum">      84</span>                 :             :         /**</span>
+<span id="L85"><span class="lineNum">      85</span>                 :             :          * Get the full voltage per cell</span>
+<span id="L86"><span class="lineNum">      86</span>                 :             :          */</span>
+<span id="L87"><span class="lineNum">      87</span>                 :             :         float full_cell_voltage() { return _params.v_charged; }</span>
+<span id="L88"><span class="lineNum">      88</span>                 :             : </span>
+<span id="L89"><span class="lineNum">      89</span>                 :             :         void setPriority(const uint8_t priority) { _priority = priority; }</span>
+<span id="L90"><span class="lineNum">      90</span>                 :<span class="tlaGNC">          36 :         void setConnected(const bool connected) { _connected = connected; }</span></span>
+<span id="L91"><span class="lineNum">      91</span>                 :<span class="tlaGNC">          21 :         void setStateOfCharge(const float soc) { _state_of_charge = math::constrain(soc, 0.f, 1.f); _external_state_of_charge = true; }</span></span>
+<span id="L92"><span class="lineNum">      92</span>                 :<span class="tlaGNC">         201 :         void setCapacityMah(const float capacity) { _capacity_mah = math::max(capacity, 0.f); }</span></span>
+<span id="L93"><span class="lineNum">      93</span>                 :             :         void updateVoltage(const float voltage_v);</span>
+<span id="L94"><span class="lineNum">      94</span>                 :             :         void updateCurrent(const float current_a);</span>
+<span id="L95"><span class="lineNum">      95</span>                 :             :         void updateTemperature(const float temperature_c);</span>
+<span id="L96"><span class="lineNum">      96</span>                 :             : </span>
+<span id="L97"><span class="lineNum">      97</span>                 :             :         /**</span>
+<span id="L98"><span class="lineNum">      98</span>                 :             :          * Update state of charge calculations</span>
+<span id="L99"><span class="lineNum">      99</span>                 :             :          *</span>
+<span id="L100"><span class="lineNum">     100</span>                 :             :          * @param timestamp Time at which the battery data sample was measured</span>
+<span id="L101"><span class="lineNum">     101</span>                 :             :          */</span>
+<span id="L102"><span class="lineNum">     102</span>                 :             :         void updateBatteryStatus(const hrt_abstime &amp;timestamp);</span>
+<span id="L103"><span class="lineNum">     103</span>                 :             : </span>
+<span id="L104"><span class="lineNum">     104</span>                 :             :         battery_status_s getBatteryStatus();</span>
+<span id="L105"><span class="lineNum">     105</span>         [<span class="tlaGBC" title="Branch 0 was taken 21 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">          21 :         float getCurrentAverage() const { return PX4_ISFINITE(_current_average_filter_a.getState()) ? _current_average_filter_a.getState() : -1.f; }</span></span>
+<span id="L106"><span class="lineNum">     106</span>                 :             :         void publishBatteryStatus(const battery_status_s &amp;battery_status);</span>
+<span id="L107"><span class="lineNum">     107</span>                 :             : </span>
+<span id="L108"><span class="lineNum">     108</span>                 :             :         /**</span>
+<span id="L109"><span class="lineNum">     109</span>                 :             :          * Convenience function for combined update and publication</span>
+<span id="L110"><span class="lineNum">     110</span>                 :             :          * @see updateBatteryStatus()</span>
+<span id="L111"><span class="lineNum">     111</span>                 :             :          * @see publishBatteryStatus()</span>
+<span id="L112"><span class="lineNum">     112</span>                 :             :          */</span>
+<span id="L113"><span class="lineNum">     113</span>                 :             :         void updateAndPublishBatteryStatus(const hrt_abstime &amp;timestamp);</span>
+<span id="L114"><span class="lineNum">     114</span>                 :             : </span>
+<span id="L115"><span class="lineNum">     115</span>                 :             :         /**</span>
+<span id="L116"><span class="lineNum">     116</span>                 :             :          * Calculates how much time is left before the battery is depleted,</span>
+<span id="L117"><span class="lineNum">     117</span>                 :             :          * given the heavily low-pass filtered current consumption.</span>
+<span id="L118"><span class="lineNum">     118</span>                 :             :          * Requires the capacity and state of charge e.g. externally set through setCapacity() and setStateOfCharge().</span>
+<span id="L119"><span class="lineNum">     119</span>                 :             :          *</span>
+<span id="L120"><span class="lineNum">     120</span>                 :             :          * @param current_a The current draw from the battery in amperes.</span>
+<span id="L121"><span class="lineNum">     121</span>                 :             :          * @return Estimated remaining time in seconds.</span>
+<span id="L122"><span class="lineNum">     122</span>                 :             :          */</span>
+<span id="L123"><span class="lineNum">     123</span>                 :             :         float computeRemainingTime(float current_a);</span>
+<span id="L124"><span class="lineNum">     124</span>                 :             : </span>
+<span id="L125"><span class="lineNum">     125</span>                 :             :         /**</span>
+<span id="L126"><span class="lineNum">     126</span>                 :             :          * Updates coulomb counting</span>
+<span id="L127"><span class="lineNum">     127</span>                 :             :          * Requires a dt, seeupdateDt()</span>
+<span id="L128"><span class="lineNum">     128</span>                 :             :          *</span>
+<span id="L129"><span class="lineNum">     129</span>                 :             :          * @param current_a Positive current draw in A</span>
+<span id="L130"><span class="lineNum">     130</span>                 :             :          * @return Accumulated used capacity in mAh</span>
+<span id="L131"><span class="lineNum">     131</span>                 :             :          */</span>
+<span id="L132"><span class="lineNum">     132</span>                 :             :         float sumDischarged(float current_a);</span>
+<span id="L133"><span class="lineNum">     133</span>                 :             :         uint8_t determineWarning(float state_of_charge);</span>
+<span id="L134"><span class="lineNum">     134</span>                 :             :         void updateDt(const hrt_abstime &amp;timestamp);</span>
+<span id="L135"><span class="lineNum">     135</span>                 :             : </span>
+<span id="L136"><span class="lineNum">     136</span>                 :             : protected:</span>
+<span id="L137"><span class="lineNum">     137</span>                 :             :         static constexpr float LITHIUM_BATTERY_RECOGNITION_VOLTAGE = 2.1f;</span>
+<span id="L138"><span class="lineNum">     138</span>                 :             : </span>
+<span id="L139"><span class="lineNum">     139</span>                 :             :         struct {</span>
+<span id="L140"><span class="lineNum">     140</span>                 :             :                 param_t v_empty;</span>
+<span id="L141"><span class="lineNum">     141</span>                 :             :                 param_t v_charged;</span>
+<span id="L142"><span class="lineNum">     142</span>                 :             :                 param_t n_cells;</span>
+<span id="L143"><span class="lineNum">     143</span>                 :             :                 param_t capacity;</span>
+<span id="L144"><span class="lineNum">     144</span>                 :             :                 param_t r_internal;</span>
+<span id="L145"><span class="lineNum">     145</span>                 :             :                 param_t low_thr;</span>
+<span id="L146"><span class="lineNum">     146</span>                 :             :                 param_t crit_thr;</span>
+<span id="L147"><span class="lineNum">     147</span>                 :             :                 param_t emergen_thr;</span>
+<span id="L148"><span class="lineNum">     148</span>                 :             :                 param_t source;</span>
+<span id="L149"><span class="lineNum">     149</span>                 :             :                 param_t bat_avrg_current;</span>
+<span id="L150"><span class="lineNum">     150</span>                 :             :         } _param_handles{};</span>
+<span id="L151"><span class="lineNum">     151</span>                 :             : </span>
+<span id="L152"><span class="lineNum">     152</span>                 :             :         struct {</span>
+<span id="L153"><span class="lineNum">     153</span>                 :             :                 float v_empty;</span>
+<span id="L154"><span class="lineNum">     154</span>                 :             :                 float v_charged;</span>
+<span id="L155"><span class="lineNum">     155</span>                 :             :                 int32_t  n_cells;</span>
+<span id="L156"><span class="lineNum">     156</span>                 :             :                 float r_internal;</span>
+<span id="L157"><span class="lineNum">     157</span>                 :             :                 float low_thr;</span>
+<span id="L158"><span class="lineNum">     158</span>                 :             :                 float crit_thr;</span>
+<span id="L159"><span class="lineNum">     159</span>                 :             :                 float emergen_thr;</span>
+<span id="L160"><span class="lineNum">     160</span>                 :             :                 int32_t source;</span>
+<span id="L161"><span class="lineNum">     161</span>                 :             :                 float bat_avrg_current;</span>
+<span id="L162"><span class="lineNum">     162</span>                 :             :         } _params{};</span>
+<span id="L163"><span class="lineNum">     163</span>                 :             : </span>
+<span id="L164"><span class="lineNum">     164</span>                 :             :         const int _index;</span>
+<span id="L165"><span class="lineNum">     165</span>                 :             : </span>
+<span id="L166"><span class="lineNum">     166</span>                 :             :         bool _first_parameter_update{true};</span>
+<span id="L167"><span class="lineNum">     167</span>                 :             :         void updateParams() override;</span>
+<span id="L168"><span class="lineNum">     168</span>                 :             : </span>
+<span id="L169"><span class="lineNum">     169</span>                 :             : private:</span>
+<span id="L170"><span class="lineNum">     170</span>                 :             :         float calculateStateOfChargeVoltageBased(const float voltage_v, const float current_a);</span>
+<span id="L171"><span class="lineNum">     171</span>                 :             :         void estimateStateOfCharge();</span>
+<span id="L172"><span class="lineNum">     172</span>                 :             :         uint16_t determineFaults();</span>
+<span id="L173"><span class="lineNum">     173</span>                 :             :         void computeScale();</span>
+<span id="L174"><span class="lineNum">     174</span>                 :             : </span>
+<span id="L175"><span class="lineNum">     175</span>                 :             :         uORB::Subscription _vehicle_status_sub{ORB_ID(vehicle_status)};</span>
+<span id="L176"><span class="lineNum">     176</span>                 :             :         uORB::SubscriptionData&lt;flight_phase_estimation_s&gt; _flight_phase_estimation_sub{ORB_ID(flight_phase_estimation)};</span>
+<span id="L177"><span class="lineNum">     177</span>                 :             :         uORB::PublicationMulti&lt;battery_status_s&gt; _battery_status_pub{ORB_ID(battery_status)};</span>
+<span id="L178"><span class="lineNum">     178</span>                 :             : </span>
+<span id="L179"><span class="lineNum">     179</span>                 :             :         bool _external_state_of_charge{false}; ///&lt; inticates that the soc is injected and not updated by this library</span>
+<span id="L180"><span class="lineNum">     180</span>                 :             : </span>
+<span id="L181"><span class="lineNum">     181</span>                 :             :         bool _connected{false};</span>
+<span id="L182"><span class="lineNum">     182</span>                 :             :         const uint8_t _source;</span>
+<span id="L183"><span class="lineNum">     183</span>                 :             :         uint8_t _priority{0};</span>
+<span id="L184"><span class="lineNum">     184</span>                 :             :         bool _battery_initialized{false};</span>
+<span id="L185"><span class="lineNum">     185</span>                 :             :         float _voltage_v{0.f};</span>
+<span id="L186"><span class="lineNum">     186</span>                 :             :         AlphaFilter&lt;float&gt; _ocv_filter_v;</span>
+<span id="L187"><span class="lineNum">     187</span>                 :             :         AlphaFilter&lt;float&gt; _cell_voltage_filter_v;</span>
+<span id="L188"><span class="lineNum">     188</span>                 :             :         float _current_a{-1};</span>
+<span id="L189"><span class="lineNum">     189</span>                 :             :         AlphaFilter&lt;float&gt;</span>
+<span id="L190"><span class="lineNum">     190</span>                 :             :         _current_average_filter_a; ///&lt; averaging filter for current. For FW, it is the current in level flight.</span>
+<span id="L191"><span class="lineNum">     191</span>                 :             :         float _temperature_c{NAN};</span>
+<span id="L192"><span class="lineNum">     192</span>                 :             :         float _discharged_mah{0.f};</span>
+<span id="L193"><span class="lineNum">     193</span>                 :             :         float _discharged_mah_loop{0.f};</span>
+<span id="L194"><span class="lineNum">     194</span>                 :             :         float _state_of_charge_volt_based{-1.f}; // [0,1]</span>
+<span id="L195"><span class="lineNum">     195</span>                 :             :         float _state_of_charge{-1.f}; // [0,1]</span>
+<span id="L196"><span class="lineNum">     196</span>                 :             :         float _scale{1.f};</span>
+<span id="L197"><span class="lineNum">     197</span>                 :             :         uint8_t _warning{battery_status_s::WARNING_NONE};</span>
+<span id="L198"><span class="lineNum">     198</span>                 :             :         float _dt{0.f};</span>
+<span id="L199"><span class="lineNum">     199</span>                 :             :         float _capacity_mah{0.f};</span>
+<span id="L200"><span class="lineNum">     200</span>                 :             :         hrt_abstime _last_timestamp{0};</span>
+<span id="L201"><span class="lineNum">     201</span>                 :             :         bool _armed{false};</span>
+<span id="L202"><span class="lineNum">     202</span>                 :             :         bool _vehicle_status_is_fw{false};</span>
+<span id="L203"><span class="lineNum">     203</span>                 :             :         hrt_abstime _last_unconnected_timestamp{0};</span>
+<span id="L204"><span class="lineNum">     204</span>                 :             : </span>
+<span id="L205"><span class="lineNum">     205</span>                 :             :         // Internal Resistance estimation</span>
+<span id="L206"><span class="lineNum">     206</span>                 :             :         void updateInternalResistanceEstimation(const float voltage_v, const float current_a);</span>
+<span id="L207"><span class="lineNum">     207</span>                 :             :         void resetInternalResistanceEstimation(const float voltage_v, const float current_a);</span>
+<span id="L208"><span class="lineNum">     208</span>                 :             :         matrix::Vector2f _RLS_est; // [Open circuit voltage estimate [V], Total internal resistance estimate [Ohm]]^T</span>
+<span id="L209"><span class="lineNum">     209</span>                 :             :         matrix::Matrix2f _estimation_covariance;</span>
+<span id="L210"><span class="lineNum">     210</span>                 :             :         bool _internal_resistance_initialized{false};</span>
+<span id="L211"><span class="lineNum">     211</span>                 :             :         float _estimation_covariance_norm{0.f};</span>
+<span id="L212"><span class="lineNum">     212</span>                 :             :         float _internal_resistance_estimate{0.005f}; // [Ohm] Per cell estimate of the internal resistance</span>
+<span id="L213"><span class="lineNum">     213</span>                 :             :         float _voltage_prediction{0.f}; // [V] Predicted voltage of the estimator</span>
+<span id="L214"><span class="lineNum">     214</span>                 :             :         float _prediction_error{0.f}; // [V] Error between the predicted and measured voltage</span>
+<span id="L215"><span class="lineNum">     215</span>                 :             :         static constexpr float LAMBDA = 0.95f;  // [0, 1] Forgetting factor (Tuning parameter for the RLS algorithm)</span>
+<span id="L216"><span class="lineNum">     216</span>                 :             :         static constexpr float R_DEFAULT = 0.005f; // [Ohm] Initial per cell estimate of the internal resistance</span>
+<span id="L217"><span class="lineNum">     217</span>                 :             :         static constexpr float OCV_DEFAULT = 4.2f; // [V] Initial per cell estimate of the open circuit voltage</span>
+<span id="L218"><span class="lineNum">     218</span>                 :             :         static constexpr float R_COVARIANCE = 0.1f; // Initial per cell covariance of the internal resistance</span>
+<span id="L219"><span class="lineNum">     219</span>                 :             :         static constexpr float OCV_COVARIANCE = 1.5f; // Initial per cell covariance of the open circuit voltage</span>
+<span id="L220"><span class="lineNum">     220</span>                 :             : };</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.0-1</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

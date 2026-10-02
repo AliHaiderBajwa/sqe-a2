@@ -1,0 +1,30 @@
+[==========] Running 11 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 11 tests from HysteresisStructural
+[ RUN      ] HysteresisStructural.TrueToFalseArmTakenWhenExpired
+[       OK ] HysteresisStructural.TrueToFalseArmTakenWhenExpired (0 ms)
+[ RUN      ] HysteresisStructural.TrueToFalseArmedButWaitingBeforeExpiry
+[       OK ] HysteresisStructural.TrueToFalseArmedButWaitingBeforeExpiry (0 ms)
+[ RUN      ] HysteresisStructural.QuiescentFalseShowsNoArm
+[       OK ] HysteresisStructural.QuiescentFalseShowsNoArm (0 ms)
+[ RUN      ] HysteresisStructural.NoRequestMeansNoTransition
+[       OK ] HysteresisStructural.NoRequestMeansNoTransition (0 ms)
+[ RUN      ] HysteresisStructural.FalseToTrueArmTakenWhenExpired
+[       OK ] HysteresisStructural.FalseToTrueArmTakenWhenExpired (0 ms)
+[ RUN      ] HysteresisStructural.FalseToTrueArmedButWaitingBeforeExpiry
+[       OK ] HysteresisStructural.FalseToTrueArmedButWaitingBeforeExpiry (0 ms)
+[ RUN      ] HysteresisStructural.QuiescentTrueShowsNoArm
+[       OK ] HysteresisStructural.QuiescentTrueShowsNoArm (0 ms)
+[ RUN      ] HysteresisStructural.NoRequestMeansNoTransitionUpwards
+[       OK ] HysteresisStructural.NoRequestMeansNoTransitionUpwards (0 ms)
+[ RUN      ] HysteresisStructural.RepeatRequestKeepsOriginalStamp
+[       OK ] HysteresisStructural.RepeatRequestKeepsOriginalStamp (0 ms)
+[ RUN      ] HysteresisStructural.AsymmetricWindowsIndependent
+[       OK ] HysteresisStructural.AsymmetricWindowsIndependent (0 ms)
+[ RUN      ] HysteresisStructural.HysteresisTimesSetPerDirection
+[       OK ] HysteresisStructural.HysteresisTimesSetPerDirection (0 ms)
+[----------] 11 tests from HysteresisStructural (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 11 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 11 tests.

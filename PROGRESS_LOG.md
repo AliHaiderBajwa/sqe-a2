@@ -6,6 +6,9 @@
 - Ashar delivered branch `ashar-pid-work` (17 tests + ASHAR_HANDOFF.md, Windows-authored, unexecuted). First Linux run: 12/17 — refuted his D-term minus-sign claim (v1.17.0 L47 is PLUS; his −4/−100 → +4/+100) and his 4-condition anti-windup gate claim (no such gate in L57-64; 3 saturation tests rewritten to accumulate-and-clamp + renamed). Header/comments corrected to real line numbers; his delivery preserved in `ashar/` for provenance. Coverage re-measured (PID 22/22, 10/10), inventory 51→57 rows, workbook/DOCX/patch/package regenerated, branch merged to main.
 - Remaining external: Taimoor workbook verification + viva bank (fallback already ships).
 
+## 2026-10-02 — `deliverables/` assembled from re-read checklist (8 items + README)
+- Re-read brief Submission Checklist (p.5); built upload-only folder (1.5M): prefixed DOCX/xlsx/patch, 3 test files (build paths preserved), RUN_INSTRUCTIONS, AI log, baseline+final `.info`, HTML, 5 run logs, README cross-reference with naming-exception justifications. All files diff-verified identical to sources; workbook re-validated on load.
+
 ## 2026-10-02 — Taimoor delivery merged + audit probes added (BST-30..33)
 - Taimoor delivered `taimoor/` (AUDIT_REPORT, COVERAGE_GAP_ANALYSIS, REPORT_TAIMOOR §§1/8/9/11, VIVA_BANK, Workbook_proposed.xlsx, PACKAGING_CHECKLIST). Every BRDA claim re-verified against final `.info` — audit accurate.
 - Closed real gaps with 4 new tests (all green first run): BST-30 index<1 clamp (`61,0,2`), BST-31 armed+NaN hold (B-D10 c2 pair, `375,0,3`), BST-32 FW double-copy (`359,0,3`), BST-33 unadvertise robustness (L356-F investigated, not deterministically reachable). Battery arcs 170→174/248; total 61 student tests.
