@@ -36,7 +36,7 @@ ninja unit-Hysteresis unit-HysteresisStructural unit-PID unit-PIDStructural func
 ./unit-HysteresisStructural        # expect 11/11 PASS (student)
 ./unit-PID                         # expect 4/4 PASS (upstream baseline)
 ./unit-PIDStructural               # expect 11/11 PASS (student)
-./functional-BatteryStructural     # expect 29/29 PASS (student)
+./functional-BatteryStructural     # expect 33/33 PASS (student)
 ```
 
 ## 4. Coverage (instrumented build + lcov, from the repo root)

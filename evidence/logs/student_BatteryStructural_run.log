@@ -1,9 +1,9 @@
 ERROR [px4_work_queue] not running
 ERROR [px4_work_queue] wq:lp_default not available
 ERROR [px4_work_queue] init failed
-[==========] Running 29 tests from 1 test suite.
+[==========] Running 33 tests from 1 test suite.
 [----------] Global test environment set-up.
-[----------] 29 tests from BatteryStructural
+[----------] 33 tests from BatteryStructural
 [ RUN      ] BatteryStructural.WarningLadderRungs
 [       OK ] BatteryStructural.WarningLadderRungs (0 ms)
 [ RUN      ] BatteryStructural.WarningExactThresholdTakesHigherRung
@@ -63,8 +63,17 @@ ERROR [battery] Battery index must be between 1 and 9 (inclusive). Received 99. 
 [       OK ] BatteryStructural.ArmedFixedWingZeroDtUpdatesAverageWithoutDt (0 ms)
 [ RUN      ] BatteryStructural.ArmedFixedWingNonLevelPhaseHoldsAverage
 [       OK ] BatteryStructural.ArmedFixedWingNonLevelPhaseHoldsAverage (0 ms)
-[----------] 29 tests from BatteryStructural (1 ms total)
+[ RUN      ] BatteryStructural.ZeroIndexClampsToOne
+ERROR [battery] Battery index must be between 1 and 9 (inclusive). Received 0. Defaulting to 1.
+[       OK ] BatteryStructural.ZeroIndexClampsToOne (0 ms)
+[ RUN      ] BatteryStructural.ArmedNonFiniteCurrentHoldsAverage
+[       OK ] BatteryStructural.ArmedNonFiniteCurrentHoldsAverage (0 ms)
+[ RUN      ] BatteryStructural.FixedWingSecondCopySkipsTransitionReset
+[       OK ] BatteryStructural.FixedWingSecondCopySkipsTransitionReset (0 ms)
+[ RUN      ] BatteryStructural.UnadvertisedTopicHoldsArmedFalse
+[       OK ] BatteryStructural.UnadvertisedTopicHoldsArmedFalse (0 ms)
+[----------] 33 tests from BatteryStructural (1 ms total)
 
 [----------] Global test environment tear-down
-[==========] 29 tests from 1 test suite ran. (1 ms total)
-[  PASSED  ] 29 tests.
+[==========] 33 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 33 tests.

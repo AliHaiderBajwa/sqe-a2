@@ -9,7 +9,7 @@ c1=`_state`, c2=`!_requested_state`.
 | T | F(req F) | pre-expiry | T (armed, waiting) | HST-02 | base |
 | F | F(req F) | pre-expiry | F (quiescent, no arm) | HST-03 | c1 independent (only c1 differs vs HST-02) |
 | T | F(req F) | expired | F (transition) | HST-01 | base |
-| T | T(req T) | expired | T (no arm) | HST-04 | c2 independent (only c2 differs vs HST-01) |
+| T | T(req T) | expired | T (no arm) | HST-04 | c2 at entry-guard level (req==state → L75 false so L77 masked; strict same-decision flip impossible — see below) |
 
 Unreachable (investigated, not a gap): c1=T,c2=F-unevaluated… precisely the arc (state=T, req=T) at L77 cannot occur because L75 (`requested != state`) guards entry. Short-circuit arc (b=false→else with a=true) likewise unreachable.
 
@@ -21,7 +21,7 @@ c1=`!_state`, c2=`_requested_state`.
 | T(st F) | T(req T) | pre-expiry | F (armed, waiting) | HST-06 | base |
 | F(st T) | T(req T) | pre-expiry | T (quiescent) | HST-07 | c1 independent |
 | T(st F) | T(req T) | expired | T (transition) | HST-05 | base |
-| T(st F) | F(req F) | expired | F (no arm) | HST-08 | c2 independent |
+| T(st F) | F(req F) | expired | F (no arm) | HST-08 | c2 at entry-guard level (same masking caveat as H-D5) |
 
 Unreachable arcs at L83 (a=false with state=T; b=false with req=F while state=F): both contradict the L75 entry guard. Proven by code inspection.
 
@@ -31,7 +31,7 @@ Unreachable arcs at L83 (a=false with state=T; b=false with req=F while state=F)
 |---|---|---|---|---|---|---|
 | T | T | T | T | 16.0 (fires) | BST-05 | base |
 | F | T | T | T | 0.0 | BST-06 | c1 (connected) |
-| T | T/F | T | T | refires→15.0 / holds 15.0 | BST-07 (mid vs final) | c2 (!initialized) |
+| T | T/F | T | T | refires→15.0 / holds 15.0 | BST-07 call1 vs BST-07 call2 (same test, sequential — state flip) | c2 (!initialized) |
 | T | T | F | T | 0.0 | BST-08 | c3 (IRinit) |
 | T | T | T | F | 0.0 | BST-09 | c4 (n_cells) |
 
@@ -62,10 +62,10 @@ Gap note (investigated): c1=T (non-finite average) is unreachable through the pu
 | armed | finite | outcome | pair test | demonstrates |
 |---|---|---|---|---|
 | F | T | holds 5.0 | BST-18 | c1 (armed) vs BST-19 |
-| T | T | tracks (avg>5) | BST-19 | base |
-| T | F | holds 5.0 | (NaN probe, removed — B-D10 demonstrably skips; kept as analyzed behavior, not a workbook row) | c2 (finite) |
+| T | T | tracks (avg>5, asserted) | BST-19 | base |
+| T | F | holds 5.0 | BST-31 | c2 (finite) vs BST-19 — only c2 differs, outcome flips track→hold |
 
-Note: c2=F verified during development (NaN current leaves average at reset value); the probe was removed because it asserted no independent observable beyond the skip already shown by BST-18 vs BST-19. Strictly, c2 independence is evidenced by code inspection + the skip path being exercised (BRDA L375 arcs both taken per coverage).
+Note: c2 demonstrated by BST-19 (armed+T, finite+T → tracks, avg>5 asserted) vs BST-31 (armed+T, finite+F via NaN current → skips update, holds 5.0). BRDA `375,0,3` now taken (verified in final `.info`).
 
 ### B-D11 — battery.cpp L377-378 `!is_fw \|\| (fresh && LEVEL)` → FW-gated update
 

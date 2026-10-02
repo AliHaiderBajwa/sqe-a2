@@ -6,16 +6,22 @@
 - Ashar delivered branch `ashar-pid-work` (17 tests + ASHAR_HANDOFF.md, Windows-authored, unexecuted). First Linux run: 12/17 — refuted his D-term minus-sign claim (v1.17.0 L47 is PLUS; his −4/−100 → +4/+100) and his 4-condition anti-windup gate claim (no such gate in L57-64; 3 saturation tests rewritten to accumulate-and-clamp + renamed). Header/comments corrected to real line numbers; his delivery preserved in `ashar/` for provenance. Coverage re-measured (PID 22/22, 10/10), inventory 51→57 rows, workbook/DOCX/patch/package regenerated, branch merged to main.
 - Remaining external: Taimoor workbook verification + viva bank (fallback already ships).
 
+## 2026-10-02 — Taimoor delivery merged + audit probes added (BST-30..33)
+- Taimoor delivered `taimoor/` (AUDIT_REPORT, COVERAGE_GAP_ANALYSIS, REPORT_TAIMOOR §§1/8/9/11, VIVA_BANK, Workbook_proposed.xlsx, PACKAGING_CHECKLIST). Every BRDA claim re-verified against final `.info` — audit accurate.
+- Closed real gaps with 4 new tests (all green first run): BST-30 index<1 clamp (`61,0,2`), BST-31 armed+NaN hold (B-D10 c2 pair, `375,0,3`), BST-32 FW double-copy (`359,0,3`), BST-33 unadvertise robustness (L356-F investigated, not deterministically reachable). Battery arcs 170→174/248; total 61 student tests.
+- Failure-count locked at 8 (F4 resolved): 2 Battery L130 + 1 PID NaN fallback (`NonFiniteIntegralGuarded` expected 0.0, actual NaN — `P*(-Inf)` is NaN, guard held) + 5 Ashar PID; §8 enumerates all.
+- Merged adapted prose (report now 61 tests; §9 Eight failures); proposed workbook rebuilt (61+32, col F, gap labels, expanded refs); VIVA_BANK updated to current truth.
+
 ## 2026-10-01 — Identities finalized (Ali Haider Bajwa 24i3102, Taimoor Khalid 24i3052, Ashar Ahmed 24i3072, Section C SE); package renamed to `24i3102_24i3052_24i3072_C_*`, DOCX + submission_pkg rebuilt, RUN_INSTRUCTIONS.md restored after rebuild wipe.
 
 ## 2026-10-01 — Report complete, DOCX exported, submission package assembled
 - `REPORT_DRAFT.md` §§6/8/9/10/11 filled; stale Ashar-pending refs replaced (PID fallback done: 11 PST tests, 10/10 arcs). §9 judgment 324 words (300–400 enforced, verified programmatically).
-- DOCX: `24i3102_24i3052_24i3072_SECTION-TBD_Report.docx` (python-docx from draft). Workbook: `workbook/Workbook.xlsx` (51 + 32 rows, 2 sheets).
+- DOCX: `24i3102_24i3052_24i3072_C_Report.docx` (python-docx from draft). Workbook: `workbook/Workbook.xlsx` (51 + 32 rows, 2 sheets).
 - Package `submission_pkg/` (1.4M): report DOCX, workbook xlsx, 3 student test files, full patch (928 insertions), run instructions, baseline + final `.info` coverage, HTML report, 5 run logs, AI log.
 - Remaining external inputs: member names + section (cover/filenames), teammate PID file swap if delivered (re-measure on arrival).
 
 ## 2026-10-01 — Coverage milestone: battery 99.6%, hysteresis/PID 100% lines; tables written
-- Final (upstream+student, `evidence/final/scope_coverage_branch.info` + html/): hysteresis.cpp 22/22 lines, 17/20 arcs (3 provably unreachable, L75-guarded); PID.cpp 22/22, 8/10 (2 pending Ashar's NaN/Inf tests); battery.cpp 230/231 lines (only L72 PARAM_INVALID defensive gap), 19/19 fns, arcs 170/248.
+- Final (upstream+student, `evidence/final/scope_coverage_branch.info` + html/): hysteresis.cpp 22/22 lines, 17/20 arcs (3 provably unreachable, L75-guarded); PID.cpp 22/22, 8/10 (2 pending Ashar's NaN/Inf tests — SUPERSEDED pre-fallback milestone; final 10/10, see newest entries); battery.cpp 230/231 lines (only L72 PARAM_INVALID defensive gap), 19/19 fns, arcs 170/248.
 - Baseline (`evidence/baseline/scope_baseline_branch.info`): hysteresis/PID at upstream levels; battery.cpp ABSENT = 0% (no upstream test) → our contribution 0→99.6%.
 - Test count: 11 Hysteresis + 29 Battery = 40 student tests green (normal + coverage builds). 2 early Battery failures were test-side expectation errors (fixed, prod untouched).
 - Workbook inputs ready: `TEST_INVENTORY.md` (40 rows + PID placeholder), `MCDC_MATRIX.md` (H-D5/H-D7/B-D4/B-D8/B-D9/B-D10/B-D11 pairs + investigated gaps B-D9-c1, H-arcs, L72). Patch: `patch/full_reconstruction.patch` (766 lines).

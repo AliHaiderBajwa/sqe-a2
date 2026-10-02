@@ -147,6 +147,11 @@ protected:
 		msg.flight_phase = phase;
 		_flight_phase_pub.publish(msg);
 	}
+
+	void unadvertiseVehicleStatus()
+	{
+		_vehicle_status_pub.unadvertise();
+	}
 };
 
 // --- B-D7: warning ladder + strict-< boundaries --------------------------------
@@ -385,6 +390,7 @@ TEST_F(BatteryStructural, ArmedMultirotorUpdatesAverage)
 	const float t = b.computeRemainingTime(20.f); // B-D10 T, B-D11 T via !is_fw
 	EXPECT_TRUE(PX4_ISFINITE(t));
 	EXPECT_GT(t, 0.f);
+	EXPECT_GT(b.getCurrentAverage(), 5.0f); // filter tracks current (pair to BST-31 hold)
 }
 
 TEST_F(BatteryStructural, ArmedFixedWingWithStalePhaseHoldsAverage)
@@ -525,5 +531,67 @@ TEST_F(BatteryStructural, ArmedFixedWingNonLevelPhaseHoldsAverage)
 			     vehicle_status_s::VEHICLE_TYPE_FIXED_WING);
 	publishFlightPhase(flight_phase_estimation_s::FLIGHT_PHASE_CLIMB, hrt_absolute_time());
 	b.computeRemainingTime(20.f);
+	EXPECT_FLOAT_EQ(b.getCurrentAverage(), 5.0f);
+}
+
+TEST_F(BatteryStructural, ZeroIndexClampsToOne)
+{
+	// Index 0 exercises the `index<1` operand of the L61 guard (index 99 in
+	// BST-24 covers only `index>9` due to short-circuit): ctor logs and clamps to 1.
+	TestBatteryIndexed b(0);
+	EXPECT_EQ(b.getBatteryStatus().id, 1);
+}
+
+TEST_F(BatteryStructural, ArmedNonFiniteCurrentHoldsAverage)
+{
+	// B-D10 c2 independence: armed=T held exactly as in BST-19 while finite
+	// flips T->F. The average must hold the reset value instead of tracking.
+	TestBattery b;
+	b.setCapacityMah(2000.f);
+	b.setStateOfCharge(1.f);
+	publishVehicleStatus(vehicle_status_s::ARMING_STATE_ARMED,
+			     vehicle_status_s::VEHICLE_TYPE_ROTARY_WING);
+	b.updateBatteryStatus(T0);
+	b.updateBatteryStatus(T0 + 1000000llu);
+	b.computeRemainingTime(NAN); // B-D9 resets (state 0), B-D10 skips (NaN)
+	EXPECT_FLOAT_EQ(b.getCurrentAverage(), 5.0f);
+}
+
+TEST_F(BatteryStructural, FixedWingSecondCopySkipsTransitionReset)
+{
+	// Second vehicle_status copy with _is_fw already true: L359 evaluated
+	// with a=T,b=F (BST-20's second call never reaches L359 — no new data).
+	// Reset target moved to 7.0, so any spurious reset would show.
+	TestBattery b;
+	b.setCapacityMah(2000.f);
+	b.setStateOfCharge(1.f);
+	publishVehicleStatus(vehicle_status_s::ARMING_STATE_ARMED,
+			     vehicle_status_s::VEHICLE_TYPE_FIXED_WING);
+	publishFlightPhase(flight_phase_estimation_s::FLIGHT_PHASE_LEVEL, 1llu); // stale
+	b.updateBatteryStatus(T0);
+	b.updateBatteryStatus(T0 + 1000000llu);
+	b.computeRemainingTime(20.f); // call1: FW transition resets to 5.0
+	EXPECT_FLOAT_EQ(b.getCurrentAverage(), 5.0f);
+	b.setBatAvrgCurrent(7.f);
+	publishVehicleStatus(vehicle_status_s::ARMING_STATE_ARMED,
+			     vehicle_status_s::VEHICLE_TYPE_FIXED_WING); // new generation
+	b.computeRemainingTime(20.f); // call2: copy T, FW && is_fw -> holds 5.0
+	EXPECT_FLOAT_EQ(b.getCurrentAverage(), 5.0f);
+}
+
+TEST_F(BatteryStructural, UnadvertisedTopicHoldsArmedFalse)
+{
+	// uORB failure injection: publish, then unadvertise, then a fresh
+	// Battery observes updated()=T with copy()=F (L356 false path) and must
+	// keep _armed false with the average at its reset value.
+	publishVehicleStatus(vehicle_status_s::ARMING_STATE_ARMED,
+			     vehicle_status_s::VEHICLE_TYPE_ROTARY_WING);
+	unadvertiseVehicleStatus();
+	TestBattery b;
+	b.setCapacityMah(2000.f);
+	b.setStateOfCharge(1.f);
+	b.updateBatteryStatus(T0);
+	const float t = b.computeRemainingTime(10.f);
+	EXPECT_TRUE(PX4_ISFINITE(t));
 	EXPECT_FLOAT_EQ(b.getCurrentAverage(), 5.0f);
 }
