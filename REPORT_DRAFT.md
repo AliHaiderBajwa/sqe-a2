@@ -6,7 +6,7 @@
 
 ## 1. What this report covers
 
-We structurally tested four production areas of PX4 v1.17.0, wrote 95 tests of our own against them, measured statement and branch coverage before and after, and performed MC/DC analysis on the failsafe-critical Battery component. No production code was changed at any point. This report records the group, the machine and baseline everything traces to, why these three areas were chosen, how each test was derived from the production logic, what the MC/DC evidence shows, what coverage was achieved, what gaps remain and why, and a final judgment on what the evidence does and does not prove.
+We structurally tested four production areas of PX4 v1.17.0, wrote 95 tests of our own against them, measured statement and branch coverage before and after, and performed MC/DC analysis on the failsafe-critical Battery component. No production code was changed at any point. This report records the group, the machine and baseline everything traces to, why these four areas were chosen, how each test was derived from the production logic, what the MC/DC evidence shows, what coverage was achieved, what gaps remain and why, and a final judgment on what the evidence does and does not prove.
 
 ## 2. Environment and fixed baseline
 
@@ -25,7 +25,7 @@ Everything was cloned, built, tested, and measured locally on a student-owned ma
 
 Every coverage number in this report traces to that commit plus our own test-only changes. One build note: the top-level `make tests` wrapper was bypassed because its build macro mishandles paths, and we configured and built directly with cmake and ninja instead (§10). This is only a difference in how the build is invoked, not a change to any code. The upstream baseline runs green before our tests were added: `unit-Hysteresis` passes 7 of 7 and `unit-PID` passes 4 of 4, with the logs kept in `evidence/baseline/`.
 
-## 3. Scope selection: the three areas and why they qualify
+## 3. Scope selection: the four areas and why they qualify
 
 We read the production code first and selected four areas. Each one is real control or business logic with decisions worth testing — not a wrapper, not branch-free math, and not generated or GUI code. The Battery file is a large, substantial component (497 lines) covering state-of-charge fusion, internal-resistance estimation, warning and fault classification, and remaining-time estimation; the Gyroscope calibration file (284 lines) decides which calibration every gyro flies with — device selection, slot binding, parameter load/save with validity guards, and thermal-offset correction. Across the four areas we exercise 386 lines of production logic, the great majority of it inside Battery's failsafe paths and Gyroscope's calibration chain.
 
@@ -38,7 +38,7 @@ We read the production code first and selected four areas. Each one is real cont
 
 Deliberately excluded: `SlewRate` (branch-free math with nothing to decide), `circuit_breaker` (a single superficial wrapper of the kind the assignment rejects), and all GUI, generated, and test-only code. Difficult logic was never excluded to flatter a percentage — Battery's estimator and failsafe chains are the hardest logic in the scope and they are the center of it.
 
-## 4. How the 61 tests were derived from the production code
+## 4. How the 95 tests were derived from the production code
 
 We started from the source, not from a coverage target. Every `if`, `&&`, and `||` in the four files became a decision that must be shown both true and false. Every boundary comparison (`>=`, `<`, exact constants such as the 1.05 over-voltage factor, the 0.01 offset-epsilon, the calibration-index bounds) became a boundary test at the exact value and one step on either side. Every invalid or error path (NaN, infinity, zero cells, unconnected battery, stale timestamps, unbound calibration slots, out-of-range desired slots, unadvertised topics) became an error or robustness test. The resulting suites and the decisions they discharge are summarized below; the per-test record (95 rows: HST-01–11, BST-01–33, PST-01–17, GST-01–34) is workbook Sheet 1.
 
