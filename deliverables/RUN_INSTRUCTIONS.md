@@ -24,6 +24,7 @@ git apply /path/to/24i3102_24i3052_24i3072_C_Patch.patch
 # adds: src/lib/hysteresis/HysteresisStructuralTest.cpp (+1 CMake line)
 #       src/lib/pid/PIDStructuralTest.cpp (+1 CMake line)
 #       src/lib/battery/BatteryStructuralTest.cpp (+2 CMake lines, functional)
+#       src/lib/sensor_calibration/GyroscopeStructuralTest.cpp (+2 CMake lines, functional)
 ```
 
 ## 3. Build + run (from the repo root)
@@ -31,12 +32,13 @@ git apply /path/to/24i3102_24i3052_24i3072_C_Patch.patch
 ```bash
 cmake . -G Ninja -DCONFIG=px4_sitl_test -B build/px4_sitl_test
 cd build/px4_sitl_test
-ninja unit-Hysteresis unit-HysteresisStructural unit-PID unit-PIDStructural functional-BatteryStructural
+ninja unit-Hysteresis unit-HysteresisStructural unit-PID unit-PIDStructural functional-BatteryStructural functional-GyroscopeStructural
 ./unit-Hysteresis                  # expect 7/7 PASS (upstream baseline)
 ./unit-HysteresisStructural        # expect 11/11 PASS (student)
 ./unit-PID                         # expect 4/4 PASS (upstream baseline)
-./unit-PIDStructural               # expect 11/11 PASS (student)
+./unit-PIDStructural               # expect 17/17 PASS (student)
 ./functional-BatteryStructural     # expect 33/33 PASS (student)
+./functional-GyroscopeStructural   # expect 34/34 PASS (student)
 ```
 
 ## 4. Coverage (instrumented build + lcov, from the repo root)
@@ -44,14 +46,16 @@ ninja unit-Hysteresis unit-HysteresisStructural unit-PID unit-PIDStructural func
 ```bash
 cmake . -G Ninja -DCONFIG=px4_sitl_test -DCMAKE_BUILD_TYPE=Coverage -B build/px4_sitl_coverage
 cd build/px4_sitl_coverage
-ninja unit-Hysteresis unit-HysteresisStructural unit-PID unit-PIDStructural functional-BatteryStructural
-./unit-Hysteresis; ./unit-HysteresisStructural; ./unit-PID; ./unit-PIDStructural; ./functional-BatteryStructural
+ninja unit-Hysteresis unit-HysteresisStructural unit-PID unit-PIDStructural functional-BatteryStructural functional-GyroscopeStructural
+./unit-Hysteresis; ./unit-HysteresisStructural; ./unit-PID; ./unit-PIDStructural; ./functional-BatteryStructural; ./functional-GyroscopeStructural
 lcov --capture --branch-coverage --directory . --gcov-tool gcov --ignore-errors mismatch -o /tmp/cov_all.info
-lcov --branch-coverage --extract /tmp/cov_all.info "*/src/lib/hysteresis/*" "*/src/lib/pid/*" "*/src/lib/battery/*" --ignore-errors mismatch -o scope_coverage_branch.info
+lcov --branch-coverage --extract /tmp/cov_all.info "*/src/lib/hysteresis/*" "*/src/lib/pid/*" "*/src/lib/battery/*" "*/src/lib/sensor_calibration/*" --ignore-errors mismatch -o scope_coverage_branch.info
 genhtml --branch-coverage scope_coverage_branch.info -o html
 ```
 
 Expected final scope results: `hysteresis.cpp` 22/22 lines, 17/20 arcs
 (3 provably unreachable); `PID.cpp` 22/22 lines, 10/10 arcs;
 `battery.cpp` 230/231 lines, 19/19 functions (sole gap L72, defensive
-`PARAM_INVALID` log unreachable with intact param metadata).
+`PARAM_INVALID` log unreachable with intact param metadata);
+`Gyroscope.cpp` 112/112 lines, 12/12 functions, 112/145 arcs
+(28 compiler unwind arcs + 5 by-construction unreachable, §8 of report).

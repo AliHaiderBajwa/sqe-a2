@@ -1,1 +1,1 @@
-genhtml --branch-coverage /home/zexr/Desktop/sqe_A2/evidence/final/scope_coverage_branch.info -o /home/zexr/Desktop/sqe_A2/evidence/final/html --title 'PX4 v1.17.0 scope coverage (final)'
+genhtml --branch-coverage /home/zexr/Desktop/sqe_A2/evidence/final/scope_coverage_branch.info -o /home/zexr/Desktop/sqe_A2/evidence/final/html

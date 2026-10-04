@@ -1,0 +1,85 @@
+ERROR [px4_work_queue] not running
+ERROR [px4_work_queue] wq:lp_default not available
+ERROR [px4_work_queue] init failed
+[==========] Running 34 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 34 tests from GyroscopeStructural
+[ RUN      ] GyroscopeStructural.DefaultConstructorResetsState
+[       OK ] GyroscopeStructural.DefaultConstructorResetsState (3 ms)
+[ RUN      ] GyroscopeStructural.DeviceIdConstructorBindsWithoutParams
+[       OK ] GyroscopeStructural.DeviceIdConstructorBindsWithoutParams (0 ms)
+[ RUN      ] GyroscopeStructural.SetDeviceIdInternalSensor
+[       OK ] GyroscopeStructural.SetDeviceIdInternalSensor (3 ms)
+[ RUN      ] GyroscopeStructural.SetDeviceIdExternalSensor
+[       OK ] GyroscopeStructural.SetDeviceIdExternalSensor (0 ms)
+[ RUN      ] GyroscopeStructural.SetDeviceIdSameValueKeepsState
+[       OK ] GyroscopeStructural.SetDeviceIdSameValueKeepsState (0 ms)
+[ RUN      ] GyroscopeStructural.CorrectionIndexZeroApplied
+[       OK ] GyroscopeStructural.CorrectionIndexZeroApplied (0 ms)
+[ RUN      ] GyroscopeStructural.CorrectionIndexThreeApplied
+[       OK ] GyroscopeStructural.CorrectionIndexThreeApplied (0 ms)
+[ RUN      ] GyroscopeStructural.CorrectionNotFoundZeroesThermal
+[       OK ] GyroscopeStructural.CorrectionNotFoundZeroesThermal (0 ms)
+[ RUN      ] GyroscopeStructural.NoUpdateWithoutForceOrData
+[       OK ] GyroscopeStructural.NoUpdateWithoutForceOrData (0 ms)
+[ RUN      ] GyroscopeStructural.ZeroDeviceIdSkipsCorrectionCopy
+[       OK ] GyroscopeStructural.ZeroDeviceIdSkipsCorrectionCopy (0 ms)
+[ RUN      ] GyroscopeStructural.SetOffsetFirstWriteAccepted
+[       OK ] GyroscopeStructural.SetOffsetFirstWriteAccepted (0 ms)
+[ RUN      ] GyroscopeStructural.SetOffsetSameValueRejected
+[       OK ] GyroscopeStructural.SetOffsetSameValueRejected (0 ms)
+[ RUN      ] GyroscopeStructural.SetOffsetLargeChangeAccepted
+[       OK ] GyroscopeStructural.SetOffsetLargeChangeAccepted (0 ms)
+[ RUN      ] GyroscopeStructural.SetOffsetRejectsNonFinite
+[       OK ] GyroscopeStructural.SetOffsetRejectsNonFinite (1 ms)
+[ RUN      ] GyroscopeStructural.SetCalibrationIndexBounds
+[       OK ] GyroscopeStructural.SetCalibrationIndexBounds (0 ms)
+[ RUN      ] GyroscopeStructural.ParametersUpdateNoDeviceReturnsEarly
+[       OK ] GyroscopeStructural.ParametersUpdateNoDeviceReturnsEarly (0 ms)
+[ RUN      ] GyroscopeStructural.ParametersLoadExternalValid
+[       OK ] GyroscopeStructural.ParametersLoadExternalValid (0 ms)
+[ RUN      ] GyroscopeStructural.InvalidRotationResetToNone
+[       OK ] GyroscopeStructural.InvalidRotationResetToNone (0 ms)
+[ RUN      ] GyroscopeStructural.InvalidPriorityResetToDefault
+ERROR [sensor_calibration] GYRO 4206592 (0) invalid priority 150, resetting
+[       OK ] GyroscopeStructural.InvalidPriorityResetToDefault (0 ms)
+[ RUN      ] GyroscopeStructural.InternalSensorFollowsBoardRotation
+[       OK ] GyroscopeStructural.InternalSensorFollowsBoardRotation (0 ms)
+[ RUN      ] GyroscopeStructural.ParametersSaveForcedSlot
+[       OK ] GyroscopeStructural.ParametersSaveForcedSlot (0 ms)
+[ RUN      ] GyroscopeStructural.ParametersSaveFindsNewSlotWithWarning
+WARN  [sensor_calibration] GYRO 4206592 calibration index changed 0 -> 1
+[       OK ] GyroscopeStructural.ParametersSaveFindsNewSlotWithWarning (0 ms)
+[ RUN      ] GyroscopeStructural.ParametersSaveNoSlotFails
+ERROR [sensor_calibration] no GYRO calibration slots available
+[       OK ] GyroscopeStructural.ParametersSaveNoSlotFails (0 ms)
+[ RUN      ] GyroscopeStructural.CorrectUncorrectRoundTrip
+[       OK ] GyroscopeStructural.CorrectUncorrectRoundTrip (0 ms)
+[ RUN      ] GyroscopeStructural.BiasCorrectedSensorOffsetMath
+[       OK ] GyroscopeStructural.BiasCorrectedSensorOffsetMath (0 ms)
+[ RUN      ] GyroscopeStructural.PrintStatusBothPaths
+GYRO 4206592 EN: 1, offset: [0.000 0.000 0.000], Ext ROT: 0
+GYRO 4206592 temperature offset: [0.0100 0.0000 0.0000]
+GYRO 2101260 EN: 1, offset: [0.000 0.000 0.000], Internal
+[       OK ] GyroscopeStructural.PrintStatusBothPaths (0 ms)
+[ RUN      ] GyroscopeStructural.CorrectionSlotTwoApplied
+[       OK ] GyroscopeStructural.CorrectionSlotTwoApplied (0 ms)
+[ RUN      ] GyroscopeStructural.ParametersLoadRejectedIndexDirect
+[       OK ] GyroscopeStructural.ParametersLoadRejectedIndexDirect (0 ms)
+[ RUN      ] GyroscopeStructural.SaveForcedNegativeDesiredFindsSlot
+[       OK ] GyroscopeStructural.SaveForcedNegativeDesiredFindsSlot (0 ms)
+[ RUN      ] GyroscopeStructural.SaveInternalWritesRotationMinusOne
+[       OK ] GyroscopeStructural.SaveInternalWritesRotationMinusOne (0 ms)
+[ RUN      ] GyroscopeStructural.UnadvertisedCorrectionSkipsCopy
+[       OK ] GyroscopeStructural.UnadvertisedCorrectionSkipsCopy (0 ms)
+[ RUN      ] GyroscopeStructural.SaveOutOfRangeDesiredFallsBackToFreeSlot
+[       OK ] GyroscopeStructural.SaveOutOfRangeDesiredFallsBackToFreeSlot (0 ms)
+[ RUN      ] GyroscopeStructural.SaveUnboundNegativeDesiredFindsSlot
+[       OK ] GyroscopeStructural.SaveUnboundNegativeDesiredFindsSlot (0 ms)
+[ RUN      ] GyroscopeStructural.SaveOutOfRangeDesiredKeepsBoundSlot
+[       OK ] GyroscopeStructural.SaveOutOfRangeDesiredKeepsBoundSlot (0 ms)
+[----------] 34 tests from GyroscopeStructural (31 ms total)
+
+[----------] Global test environment tear-down
+[==========] 34 tests from 1 test suite ran. (31 ms total)
+[  PASSED  ] 34 tests.

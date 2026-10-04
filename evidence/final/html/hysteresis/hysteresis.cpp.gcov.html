@@ -4,7 +4,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>LCOV - PX4 v1.17.0 scope coverage (final) - hysteresis/hysteresis.cpp</title>
+  <title>LCOV - scope_coverage_branch.info - hysteresis/hysteresis.cpp</title>
   <link rel="stylesheet" type="text/css" href="../gcov.css">
 </head>
 
@@ -28,7 +28,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test:</td>
-            <td class="headerValue">PX4 v1.17.0 scope coverage (final)</td>
+            <td class="headerValue">scope_coverage_branch.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-10-02 01:13:56</td>
+            <td class="headerValue">2026-10-04 17:03:10</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -114,51 +114,51 @@
 <span id="L43"><span class="lineNum">      43</span>                 :             : {</span>
 <span id="L44"><span class="lineNum">      44</span>                 :             : </span>
 <span id="L45"><span class="lineNum">      45</span>                 :             : void</span>
-<span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaGNC tlaBgGNC">          98 : Hysteresis::set_hysteresis_time_from(const bool from_state, const hrt_abstime new_hysteresis_time_us)</span></span>
+<span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaGNC tlaBgGNC">         248 : Hysteresis::set_hysteresis_time_from(const bool from_state, const hrt_abstime new_hysteresis_time_us)</span></span>
 <span id="L47"><span class="lineNum">      47</span>                 :             : {</span>
-<span id="L48"><span class="lineNum">      48</span>         [<span class="tlaGBC" title="Branch 0 was taken 49 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 49 times"> + </span>]:<span class="tlaGNC">          98 :         if (from_state) {</span></span>
-<span id="L49"><span class="lineNum">      49</span>                 :<span class="tlaGNC">          49 :                 _time_from_true_us = new_hysteresis_time_us;</span></span>
+<span id="L48"><span class="lineNum">      48</span>         [<span class="tlaGBC" title="Branch 0 was taken 124 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 124 times"> + </span>]:<span class="tlaGNC">         248 :         if (from_state) {</span></span>
+<span id="L49"><span class="lineNum">      49</span>                 :<span class="tlaGNC">         124 :                 _time_from_true_us = new_hysteresis_time_us;</span></span>
 <span id="L50"><span class="lineNum">      50</span>                 :             : </span>
 <span id="L51"><span class="lineNum">      51</span>                 :             :         } else {</span>
-<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">          49 :                 _time_from_false_us = new_hysteresis_time_us;</span></span>
+<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">         124 :                 _time_from_false_us = new_hysteresis_time_us;</span></span>
 <span id="L53"><span class="lineNum">      53</span>                 :             :         }</span>
-<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">          98 : }</span></span>
+<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">         248 : }</span></span>
 <span id="L55"><span class="lineNum">      55</span>                 :             : </span>
 <span id="L56"><span class="lineNum">      56</span>                 :             : void</span>
-<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaGNC">         101 : Hysteresis::set_state_and_update(const bool new_state, const hrt_abstime &amp;now_us)</span></span>
+<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaGNC">         241 : Hysteresis::set_state_and_update(const bool new_state, const hrt_abstime &amp;now_us)</span></span>
 <span id="L58"><span class="lineNum">      58</span>                 :             : {</span>
-<span id="L59"><span class="lineNum">      59</span>         [<span class="tlaGBC" title="Branch 0 was taken 91 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 10 times"> + </span>]:<span class="tlaGNC">         101 :         if (new_state != _state) {</span></span>
-<span id="L60"><span class="lineNum">      60</span>         [<span class="tlaGBC" title="Branch 0 was taken 72 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 19 times"> + </span>]:<span class="tlaGNC">          91 :                 if (new_state != _requested_state) {</span></span>
-<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaGNC">          72 :                         _requested_state = new_state;</span></span>
-<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaGNC">          72 :                         _last_time_to_change_state = now_us;</span></span>
+<span id="L59"><span class="lineNum">      59</span>         [<span class="tlaGBC" title="Branch 0 was taken 216 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 25 times"> + </span>]:<span class="tlaGNC">         241 :         if (new_state != _state) {</span></span>
+<span id="L60"><span class="lineNum">      60</span>         [<span class="tlaGBC" title="Branch 0 was taken 172 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 44 times"> + </span>]:<span class="tlaGNC">         216 :                 if (new_state != _requested_state) {</span></span>
+<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaGNC">         172 :                         _requested_state = new_state;</span></span>
+<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaGNC">         172 :                         _last_time_to_change_state = now_us;</span></span>
 <span id="L63"><span class="lineNum">      63</span>                 :             :                 }</span>
 <span id="L64"><span class="lineNum">      64</span>                 :             : </span>
 <span id="L65"><span class="lineNum">      65</span>                 :             :         } else {</span>
-<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">          10 :                 _requested_state = _state;</span></span>
+<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">          25 :                 _requested_state = _state;</span></span>
 <span id="L67"><span class="lineNum">      67</span>                 :             :         }</span>
 <span id="L68"><span class="lineNum">      68</span>                 :             : </span>
-<span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaGNC">         101 :         update(now_us);</span></span>
-<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">         101 : }</span></span>
+<span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaGNC">         241 :         update(now_us);</span></span>
+<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">         241 : }</span></span>
 <span id="L71"><span class="lineNum">      71</span>                 :             : </span>
 <span id="L72"><span class="lineNum">      72</span>                 :             : void</span>
-<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">         198 : Hysteresis::update(const hrt_abstime &amp;now_us)</span></span>
+<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">         478 : Hysteresis::update(const hrt_abstime &amp;now_us)</span></span>
 <span id="L74"><span class="lineNum">      74</span>                 :             : {</span>
-<span id="L75"><span class="lineNum">      75</span>         [<span class="tlaGBC" title="Branch 0 was taken 168 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 30 times"> + </span>]:<span class="tlaGNC">         198 :         if (_requested_state != _state) {</span></span>
+<span id="L75"><span class="lineNum">      75</span>         [<span class="tlaGBC" title="Branch 0 was taken 403 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 75 times"> + </span>]:<span class="tlaGNC">         478 :         if (_requested_state != _state) {</span></span>
 <span id="L76"><span class="lineNum">      76</span>                 :             : </span>
-<span id="L77"><span class="lineNum">      77</span>   [<span class="tlaGBC" title="Branch 0 was taken 62 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 106 times"> + </span><span class="tlaGBC" title="Branch 2 was taken 62 times"> + </span><span class="tlaUNC" title="Branch 3 was not taken"> - </span>]:<span class="tlaGNC">         168 :                 if (_state &amp;&amp; !_requested_state) {</span></span>
+<span id="L77"><span class="lineNum">      77</span>   [<span class="tlaGBC" title="Branch 0 was taken 147 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 256 times"> + </span><span class="tlaGBC" title="Branch 2 was taken 147 times"> + </span><span class="tlaUNC" title="Branch 3 was not taken"> - </span>]:<span class="tlaGNC">         403 :                 if (_state &amp;&amp; !_requested_state) {</span></span>
 <span id="L78"><span class="lineNum">      78</span>                 :             :                         // true -&gt; false</span>
-<span id="L79"><span class="lineNum">      79</span>         [<span class="tlaGBC" title="Branch 0 was taken 26 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 36 times"> + </span>]:<span class="tlaGNC">          62 :                         if (now_us &gt;= _last_time_to_change_state + _time_from_true_us) {</span></span>
-<span id="L80"><span class="lineNum">      80</span>                 :<span class="tlaGNC">          26 :                                 _state = false;</span></span>
+<span id="L79"><span class="lineNum">      79</span>         [<span class="tlaGBC" title="Branch 0 was taken 61 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 86 times"> + </span>]:<span class="tlaGNC">         147 :                         if (now_us &gt;= _last_time_to_change_state + _time_from_true_us) {</span></span>
+<span id="L80"><span class="lineNum">      80</span>                 :<span class="tlaGNC">          61 :                                 _state = false;</span></span>
 <span id="L81"><span class="lineNum">      81</span>                 :             :                         }</span>
 <span id="L82"><span class="lineNum">      82</span>                 :             : </span>
-<span id="L83"><span class="lineNum">      83</span>   [<span class="tlaGBC" title="Branch 0 was taken 106 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span><span class="tlaGBC" title="Branch 2 was taken 106 times"> + </span><span class="tlaUNC" title="Branch 3 was not taken"> - </span>]:<span class="tlaGNC">         106 :                 } else if (!_state &amp;&amp; _requested_state) {</span></span>
+<span id="L83"><span class="lineNum">      83</span>   [<span class="tlaGBC" title="Branch 0 was taken 256 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span><span class="tlaGBC" title="Branch 2 was taken 256 times"> + </span><span class="tlaUNC" title="Branch 3 was not taken"> - </span>]:<span class="tlaGNC">         256 :                 } else if (!_state &amp;&amp; _requested_state) {</span></span>
 <span id="L84"><span class="lineNum">      84</span>                 :             :                         // false -&gt; true</span>
-<span id="L85"><span class="lineNum">      85</span>         [<span class="tlaGBC" title="Branch 0 was taken 36 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 70 times"> + </span>]:<span class="tlaGNC">         106 :                         if (now_us &gt;= _last_time_to_change_state + _time_from_false_us) {</span></span>
-<span id="L86"><span class="lineNum">      86</span>                 :<span class="tlaGNC">          36 :                                 _state = true;</span></span>
+<span id="L85"><span class="lineNum">      85</span>         [<span class="tlaGBC" title="Branch 0 was taken 86 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 170 times"> + </span>]:<span class="tlaGNC">         256 :                         if (now_us &gt;= _last_time_to_change_state + _time_from_false_us) {</span></span>
+<span id="L86"><span class="lineNum">      86</span>                 :<span class="tlaGNC">          86 :                                 _state = true;</span></span>
 <span id="L87"><span class="lineNum">      87</span>                 :             :                         }</span>
 <span id="L88"><span class="lineNum">      88</span>                 :             :                 }</span>
 <span id="L89"><span class="lineNum">      89</span>                 :             :         }</span>
-<span id="L90"><span class="lineNum">      90</span>                 :<span class="tlaGNC">         198 : }</span></span>
+<span id="L90"><span class="lineNum">      90</span>                 :<span class="tlaGNC">         478 : }</span></span>
 <span id="L91"><span class="lineNum">      91</span>                 :             : </span>
 <span id="L92"><span class="lineNum">      92</span>                 :             : } // namespace systemlib</span>
         </pre>

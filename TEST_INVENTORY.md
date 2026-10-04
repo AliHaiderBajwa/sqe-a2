@@ -57,6 +57,47 @@ Thresholds used: low 0.3, crit 0.15, emergen 0.07; n_cells 4, V_charged 4.2, V_e
 | BST-32 | computeRemainingTime | FW second copy skips transition reset | ARMED FW ×2 pubs, target 7.0 | avg holds 5.0 | PASS | L359 aT,bF | BatteryStructural.FixedWingSecondCopySkipsTransitionReset |
 | BST-33 | computeRemainingTime | unadvertised topic keeps armed false | publish, unadvertise, fresh Battery | t finite, avg 5.0, unarmed | PASS | robustness (L356-F investigated) | BatteryStructural.UnadvertisedTopicHoldsArmedFalse |
 
+### Gyroscope — `functional-GyroscopeStructural` (src/lib/sensor_calibration/GyroscopeStructuralTest.cpp, GTest functional)
+
+SIM = SIMULATION-bus id (internal); EXT = UNKNOWN-bus non-zero id (external). Fixture resets CAL_GYRO0..3 ID/ROT/PRIO/OFF per test.
+
+| Test ID | Component/function | Purpose / scenario | Key controlled input/state | Expected result | Exec | Structural target | Ref |
+|---|---|---|---|---|---|---|---|
+| GST-01 | ctor / Reset | default state after construction | fresh object | uncalibrated, prio 50, offsets 0 | PASS | G-D11 internal arm | GyroscopeStructural.DefaultConstructorResetsState |
+| GST-02 | device-id ctor | binds id, no saved cal → Reset | SIM id | idx -1, uncalibrated | PASS | G-D1 T, G-D9 reset arm | GyroscopeStructural.DeviceIdConstructorBindsWithoutParams |
+| GST-03 | set_device_id | internal sensor defaults | SIM id | external F, prio 50 | PASS | G-D1 T, G-D11 internal | GyroscopeStructural.SetDeviceIdInternalSensor |
+| GST-04 | set_device_id | external sensor defaults | EXT id | external T, prio 75 | PASS | G-D1 T, G-D11 external | GyroscopeStructural.SetDeviceIdExternalSensor |
+| GST-05 | set_device_id | same id keeps state (no Reset) | SIM, offset 0.1, same id again | offset kept, count 1 | PASS | G-D1 F-path | GyroscopeStructural.SetDeviceIdSameValueKeepsState |
+| GST-06 | SensorCorrectionsUpdate | slot-0 thermal applied | correction slot 0, SIM | thermal 0.01/0.02/0.03 | PASS | G-D2 T, G-D5/G-D6 case 0 | GyroscopeStructural.CorrectionIndexZeroApplied |
+| GST-07 | SensorCorrectionsUpdate | slot-3 thermal applied | correction slot 3, EXT | thermal -0.05/0.06/-0.07 | PASS | G-D6 case 3 | GyroscopeStructural.CorrectionIndexThreeApplied |
+| GST-08 | SensorCorrectionsUpdate | unknown device zeroes thermal | correction for other id | thermal 0 | PASS | G-D5 no-match, L107 | GyroscopeStructural.CorrectionNotFoundZeroesThermal |
+| GST-09 | SensorCorrectionsUpdate | no data + no force → skip | nothing published, force F | thermal 0 | PASS | G-D2 F-path | GyroscopeStructural.NoUpdateWithoutForceOrData |
+| GST-10 | SensorCorrectionsUpdate | device 0 early return | device 0, force T | thermal 0 | PASS | G-D3 T | GyroscopeStructural.ZeroDeviceIdSkipsCorrectionCopy |
+| GST-11 | set_offset | first write accepted (count 0) | offset 0.001 | true, count 1 | PASS | G-D7 count arm | GyroscopeStructural.SetOffsetFirstWriteAccepted |
+| GST-12 | set_offset | identical rewrite rejected | offset 0.1 twice | second false, count 1 | PASS | G-D7 F-path | GyroscopeStructural.SetOffsetSameValueRejected |
+| GST-13 | set_offset | large change accepted | 0.1 then 0.5 | true, count 2 | PASS | G-D7 epsilon arm | GyroscopeStructural.SetOffsetLargeChangeAccepted |
+| GST-14 | set_offset | NaN rejected | NaN offset | false, count 0 | PASS | G-D7 finite guard F | GyroscopeStructural.SetOffsetRejectsNonFinite |
+| GST-15 | set_calibration_index | bounds enforced | 2 valid; -1, 4 rejected | idx stays 2 | PASS | G-D8 T/F | GyroscopeStructural.SetCalibrationIndexBounds |
+| GST-16 | ParametersUpdate | device 0 early return | fresh object | idx -1 | PASS | G-D9 L144 T | GyroscopeStructural.ParametersUpdateNoDeviceReturnsEarly |
+| GST-17 | ParametersLoad | full valid load, external | slot 0 bound, ROT 2, PRIO 50, OFF set | idx 0, calibrated, ROT 2, prio 50 | PASS | G-D9/G-D10 T-paths | GyroscopeStructural.ParametersLoadExternalValid |
+| GST-18 | ParametersLoad | invalid rotation reset | EXT, ROT 99 | ROTATION_NONE | PASS | G-D10 L166 T | GyroscopeStructural.InvalidRotationResetToNone |
+| GST-19 | ParametersLoad | invalid priority reset | EXT, PRIO 150 | param -1, prio 75 | PASS | G-D10 L181/L185 T | GyroscopeStructural.InvalidPriorityResetToDefault |
+| GST-20 | ParametersLoad | internal ignores ROT param | SIM, ROT 2 | board rotation | PASS | G-D10 internal arm | GyroscopeStructural.InternalSensorFollowsBoardRotation |
+| GST-21 | ParametersSave | forced slot bind | EXT unbound, save(1, force) | idx 1, ID param set | PASS | G-D12 L227 T | GyroscopeStructural.ParametersSaveForcedSlot |
+| GST-22 | ParametersSave | slot moved + warn path | slot 0 rebound elsewhere, save unforced | idx 1 | PASS | G-D12 L230 T, L237 warn | GyroscopeStructural.ParametersSaveFindsNewSlotWithWarning |
+| GST-23 | ParametersSave | no free slot fails | all 4 slots taken, save unforced | false, idx -1 | PASS | G-D12 L243 F | GyroscopeStructural.ParametersSaveNoSlotFails |
+| GST-24 | Correct/Uncorrect | rotation round-trip | SIM, offset set | back == raw | PASS | inline math | GyroscopeStructural.CorrectUncorrectRoundTrip |
+| GST-25 | BiasCorrectedSensorOffset | bias math | SIM, offset + bias | offset + Rᵀ·bias | PASS | inline math | GyroscopeStructural.BiasCorrectedSensorOffsetMath |
+| GST-26 | PrintStatus | external/internal + thermal log arms | EXT w/ thermal; SIM | no crash | PASS | G-D13 both | GyroscopeStructural.PrintStatusBothPaths |
+| GST-27 | SensorCorrectionsUpdate | slot-2 thermal applied | correction slot 2, SIM2 | thermal 0.04/-0.05/0.06 | PASS | G-D6 case 2 (L95-97) | GyroscopeStructural.CorrectionSlotTwoApplied |
+| GST-28 | ParametersLoad | direct call, index -1 → false | fresh object Load() | false, idx -1 | PASS | G-D10 L161 F, L201 | GyroscopeStructural.ParametersLoadRejectedIndexDirect |
+| GST-29 | ParametersSave | forced negative desired → slot kept | bound idx 0, save(-1, force) | idx 0, success | PASS | G-D12 L227 F, L230-231 F | GyroscopeStructural.SaveForcedNegativeDesiredFindsSlot |
+| GST-30 | ParametersSave | internal ROT=-1 marker saved | SIM bound, save unforced then forced | ROT param -1 | PASS | G-D12 L237 no-warn, L253-254 | GyroscopeStructural.SaveInternalWritesRotationMinusOne |
+| GST-31 | SensorCorrectionsUpdate | unadvertised topic skips copy | publish, unadvertise, fresh gyro | thermal 0 | PASS | G-D2 robustness (L84-F) | GyroscopeStructural.UnadvertisedCorrectionSkipsCopy |
+| GST-32 | ParametersSave | out-of-range desired → free slot | unbound, save(4, force) | idx 0, success | PASS | G-D12 L227 3rd-op F | GyroscopeStructural.SaveOutOfRangeDesiredFallsBackToFreeSlot |
+| GST-33 | ParametersSave | unbound + force resolves slot | device 0, save(-1, force) | idx 0, success | PASS | G-D12 L230 2nd-op T | GyroscopeStructural.SaveUnboundNegativeDesiredFindsSlot |
+| GST-34 | ParametersSave | out-of-range desired keeps bound slot | bound idx 0, save(4, force) | idx 0, success | PASS | G-D12 L231 full eval | GyroscopeStructural.SaveOutOfRangeDesiredKeepsBoundSlot |
+
 ### PID — `unit-PIDStructural` (src/lib/pid/PIDStructuralTest.cpp, GTest unit)
 
 | Test ID | Component/function | Purpose / scenario | Key controlled input/state | Expected result | Exec | Structural target | Ref |

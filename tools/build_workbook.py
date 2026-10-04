@@ -39,8 +39,8 @@ inv_tables = md_tables(f"{BASE}/TEST_INVENTORY.md")
 inv = []
 for _, t in inv_tables:
     if t["header"] and t["header"][0] == "Test ID":
-        inv += [r for r in t["rows"] if len(r) == 8 and re.fullmatch(r"(HST|BST|PST)-\d+", r[0])]
-assert len(inv) == 61, f"expected 61 inventory rows, got {len(inv)}"
+        inv += [r for r in t["rows"] if len(r) == 8 and re.fullmatch(r"(HST|BST|PST|GST)-\d+", r[0])]
+assert len(inv) == 95, f"expected 95 inventory rows, got {len(inv)}"
 
 # ---- Sheet 2 data ----
 mx_tables = md_tables(f"{BASE}/MCDC_MATRIX.md")

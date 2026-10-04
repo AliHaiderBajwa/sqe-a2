@@ -4,7 +4,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>LCOV - PX4 v1.17.0 scope coverage (final) - pid/PID.hpp</title>
+  <title>LCOV - scope_coverage_branch.info - pid/PID.hpp</title>
   <link rel="stylesheet" type="text/css" href="../gcov.css">
 </head>
 
@@ -28,7 +28,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test:</td>
-            <td class="headerValue">PX4 v1.17.0 scope coverage (final)</td>
+            <td class="headerValue">scope_coverage_branch.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-10-02 01:13:56</td>
+            <td class="headerValue">2026-10-04 17:03:10</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryMed">87.5&nbsp;%</td>
@@ -110,15 +110,15 @@
 <span id="L39"><span class="lineNum">      39</span>                 :             : {</span>
 <span id="L40"><span class="lineNum">      40</span>                 :             : public:</span>
 <span id="L41"><span class="lineNum">      41</span>                 :             :         PID() = default;</span>
-<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC tlaBgGNC">          33 :         virtual ~PID() = default;</span></span>
-<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">          29 :         void setOutputLimit(const float limit) { _limit_output = limit; }</span></span>
-<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">          11 :         void setIntegralLimit(const float limit) { _limit_integral = limit; }</span></span>
+<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC tlaBgGNC">         138 :         virtual ~PID() = default;</span></span>
+<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">         129 :         void setOutputLimit(const float limit) { _limit_output = limit; }</span></span>
+<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">          51 :         void setIntegralLimit(const float limit) { _limit_integral = limit; }</span></span>
 <span id="L45"><span class="lineNum">      45</span>                 :             :         void setGains(const float P, const float I, const float D);</span>
-<span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaGNC">          34 :         void setSetpoint(const float setpoint) { _setpoint = setpoint; }</span></span>
+<span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaGNC">         144 :         void setSetpoint(const float setpoint) { _setpoint = setpoint; }</span></span>
 <span id="L47"><span class="lineNum">      47</span>                 :             :         float update(const float feedback, const float dt, const bool update_integral = true);</span>
-<span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaGNC">          13 :         float getIntegral() { return _integral; }</span></span>
-<span id="L49"><span class="lineNum">      49</span>                 :<span class="tlaGNC">           4 :         void resetIntegral() { _integral = 0.f; };</span></span>
-<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">           1 :         void resetDerivative() { _last_feedback = NAN; };</span></span>
+<span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaGNC">          78 :         float getIntegral() { return _integral; }</span></span>
+<span id="L49"><span class="lineNum">      49</span>                 :<span class="tlaGNC">           9 :         void resetIntegral() { _integral = 0.f; };</span></span>
+<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">           6 :         void resetDerivative() { _last_feedback = NAN; };</span></span>
 <span id="L51"><span class="lineNum">      51</span>                 :             : private:</span>
 <span id="L52"><span class="lineNum">      52</span>                 :             :         void updateIntegral(float error, const float dt);</span>
 <span id="L53"><span class="lineNum">      53</span>                 :             :         float updateDerivative(float feedback, const float dt);</span>
